@@ -1,0 +1,94 @@
+<div class="ProfileContainer">
+  <div class="AddMemberHeader">
+    <h2 mat-dialog-title>Profile Details</h2>
+    <button mat-button class="close-icon" [mat-dialog-close]="true">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+
+  <div class="AddMemberHeader">
+    <div class="AddMemberHeader">
+      <div>
+        <img src="{{ memberslist.image }}" alt="{{ memberslist.name }}" class="ProfileMemberImage" />
+      </div>
+      <div class="ms-3">
+        <div class="AddMemberHeader">
+          <div>
+            <mat-card-title class="memberName">{{memberslist.name }}</mat-card-title>
+          </div>
+          <div style="margin-top: 20px">...</div>
+        </div>
+        <div>
+          <mat-card-subtitle>{{ memberslist.designation }}</mat-card-subtitle>
+          <mat-card-subtitle>
+            <h4 class="memberName" style="font-size: 18px">
+              {{ memberslist.empId }}
+            </h4>
+          </mat-card-subtitle>
+        </div>
+        <div class="AddMemberHeader">
+          <mat-card-subtitle>
+            <img src="../../assets/Images/icons/callSign.png" alt="callSign" class="CardIcons" />&nbsp;&nbsp;
+            <img src="/assets/Images/icons/chatSign.png" alt="chatSign" class="CardIcons" />&nbsp;&nbsp;
+            <img src="/assets/Images/icons/emailSign.png" alt="emailSign" class="CardIcons" />
+          </mat-card-subtitle>
+          <mat-card-subtitle class="TeamMemberAvailability" style="color: #0f0f0f">
+            <div *ngIf="memberslist.status === 'Available';then thenBlock;else elseBlock"></div>
+            <ng-template #thenBlock>
+              <img src="/assets/Images/icons/availableSign.png" alt="availableSign" />
+            </ng-template>
+            <ng-template #elseBlock>
+              <mat-icon>cancel</mat-icon>
+            </ng-template>
+            &nbsp;{{ memberslist.status }}
+          </mat-card-subtitle>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h3 class="horizontal-profiletext-decorator">BASIC DETAILS</h3>
+    <table class="profileTableData">
+      <tr>
+        <td>Address</td>
+        <td>{{memberslist.address}}</td>
+      </tr>
+      <tr>
+        <td>Qualification</td>
+        <td>{{memberslist.qualification}}</td>
+      </tr>
+    </table>
+  </div>
+  <div>
+    <h3 class="horizontal-profiletext-decorator">TASK DETAILS</h3>
+    <div class="profileGridContainer">
+      <div class="item1 justify-content-center align-items-center">
+        <h4>TASK SCORE</h4>
+        <div class="progress-container">
+          <mat-progress-spinner mode="determinate" [value]="value" diameter="100"></mat-progress-spinner>
+          <div class="progress-label">{{ value }}%</div>
+        </div>
+      </div>
+      <div class="item2">
+        <h4>NEW TASKS <img src="../../assets/Images/icons/newTasks.png" alt="new tasks"></h4>
+        <p>{{memberslist.assigned}}</p>
+      </div>
+      <div class="item2">
+        <h4>COMPLETED <img src="../../assets/Images/icons/completed.png" alt="completed"></h4>
+        <p>{{memberslist.completed}}</p>
+      </div>
+      <div class="item2">
+        <h4>PENDING <img src="../../assets/Images/icons/pending.png" alt="pending"></h4>
+        <p>{{memberslist.pending}}</p>
+      </div>
+      <div class="item2">
+        <h4>IN PROGRESS <img src="../../assets/Images/icons/inprogress.png" alt="Inprogress"></h4>
+        <p>{{memberslist.assigned- memberslist.completed}}</p>
+      </div>
+    </div>
+    <button mat-button class="addNewTaskButton">
+      <img src="/assets/Images/icons/AddIconColor.png" alt="addIcon" />
+      Assign New Task
+    </button>
+  </div>
+  <!-- (click)="openDialog()" -->

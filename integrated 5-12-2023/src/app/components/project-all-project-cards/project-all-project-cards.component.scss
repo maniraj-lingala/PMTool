@@ -1,0 +1,21 @@
+.manager-card {
+    border: 1px dashed #DDD;
+    background-color: #FBFBFB;
+  }
+  .health-card {
+    border: 1px dashed #DDD;
+    background-color: #FBFBFB;
+  }
+
+
+.mat-card-title {
+    font-style: unset;
+    font-size: small;
+    display: flex; /* Use flexbox to make children elements appear in a row */
+    align-items: center; /* Align items vertically in the center */
+}
+
+.date-range {
+    color: crimson;
+    margin-left: 8px; /* Add some margin between start date and end date */
+}

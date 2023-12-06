@@ -1,0 +1,101 @@
+<mat-card>
+    <mat-list class="task-overview-start">
+      <!-- task-overview -->
+      <mat-list-item class="list-item-container mb-3">
+        <div class="flex-container">
+          <div class="flex-item">
+            <span class="margin-right">Task Overview</span>
+          </div>
+          <div class="container mb-1 task-overview-dropdown">
+            <select class="form-control-sm" id="myDropdown" name="myDropdown">
+              <option value="" disabled selected>This Week</option>
+              <option value="option1">Option 1</option>
+              <option value="option2">Option 2</option>
+              <option value="option3">Option 3</option>
+            </select>
+          </div>
+        </div>
+      </mat-list-item>
+  
+  
+      <!-- <div class="horizontalDottedLine"><img src="../../../assets/Line 152.png" alt=""></div> -->
+  
+      <!-- new task -->
+      <mat-list-item class="task-bar">
+        <div class="task-img">
+          <img src="../../../assets/Images/overviewIcons/Group_47122-removebg-preview.png" alt="" class="innerImage">
+        </div>
+  
+        <div class="middle-content">
+          <div matListItemTitle class="content1">{{ taskTitle1 }}</div>
+          <div matListItemLine class="content2">{{ taskNumber1 }}</div>
+        </div>
+  
+        <div class="right-content">
+          <span class="inprogress-task"><mat-icon>keyboard_arrow_down</mat-icon>{{ progressPercentage1 }}%</span>
+          <span>{{ lastWeek1 }}</span>
+        </div>
+      </mat-list-item>
+  
+  
+  
+      <div class="horizontalDottedLine"><img src="../../../assets/Images/overviewIcons/Line-152.png" alt=""></div>
+  
+      <!-- <completed-tasks> -->
+      <mat-list-item class="task-bar">
+        <div class="task-img">
+          <img src="../../../assets/Images/overviewIcons/Group-2.png" alt="" class="innerImage">
+        </div>
+  
+        <div class="middle-content">
+          <div matListItemTitle class="content1">{{ taskTitle2 }}</div>
+          <div matListItemLine class="content2">{{ taskNumber2 }}</div>
+        </div>
+  
+        <div class="right-content">
+          <span class="completed-tasks"><mat-icon>keyboard_arrow_up</mat-icon>{{ progressPercentage2 }}%</span>
+          <span>{{ lastWeek2 }}</span>
+        </div>
+      </mat-list-item>
+  
+  
+      <div class="horizontalDottedLine"><img src="../../../assets/Images/overviewIcons/Line-152.png" alt=""></div>
+  
+  
+      <!-- <panding-task> -->
+      <mat-list-item class="task-bar">
+        <div class="task-img">
+          <img src="../../../assets/Images/overviewIcons/Group-3.png" alt="" class="innerImage">
+        </div>
+  
+        <div class="middle-content">
+          <div matListItemTitle class="content1">{{ taskTitle3 }}</div>
+          <div matListItemLine class="content2">{{ taskNumber3 }}</div>
+        </div>
+  
+        <div class="right-content">
+          <span class="inprogress-task"><mat-icon>keyboard_arrow_down</mat-icon>{{ progressPercentage3 }}%</span>
+          <span>{{ lastWeek3 }}</span>
+        </div>
+      </mat-list-item>
+  
+      <div class="horizontalDottedLine"><img src="../../../assets/Images/overviewIcons/Line-152.png" alt=""></div>
+  
+      <!-- <inprogress-task> -->
+      <mat-list-item class="task-bar">
+        <div class="task-img">
+          <img src="../../../assets/Images/overviewIcons/Group-4.png" alt="" class="innerImage">
+        </div>
+  
+        <div class="middle-content">
+          <div matListItemTitle class="content1">{{ taskTitle4 }}</div>
+          <div matListItemLine class="content2">{{ taskNumber4 }}</div>
+        </div>
+  
+        <div class="right-content">
+          <span class="inprogress-task"><mat-icon>keyboard_arrow_down</mat-icon>{{ progressPercentage4 }}%</span>
+          <span>{{ lastWeek4 }}</span>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </mat-card>

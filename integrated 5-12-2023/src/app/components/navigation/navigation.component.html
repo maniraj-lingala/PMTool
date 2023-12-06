@@ -1,0 +1,60 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <mat-toolbar ><span id="pro">Pro</span><span id="manage">Manage</span></mat-toolbar>
+    <!-- side nav List items -->
+    <mat-nav-list>
+      <a mat-list-item class="sidenav-content" (click)="selectComponent('dashboard')">
+        <img src="../../assets/Images/navbar_images/Dashboard.png" alt="dashboradimage">
+        Dashboard</a>
+      <a mat-list-item class="sidenav-content" (click)="selectComponent('projects')">
+        <img src="../../assets/Images/navbar_images/Projects.png" alt="projectsimage"> Projects</a>
+      <a mat-list-item class="sidenav-content" (click)="selectComponent('workitems')">
+        <img src="../../assets/Images/navbar_images/Workitems.png" alt="workitemsimage"> Work Items</a>
+      <a mat-list-item class="sidenav-content" (click)="selectComponent('employees')">
+        <img src="../../assets/Images/navbar_images/Employees.png" alt="employeesimage"> Employees</a>
+      <a mat-list-item class="sidenav-content" (click)="selectComponent('customers')">
+        <img src="../../assets/Images/navbar_images/Customers.png" alt="customersimage"> Customers</a>
+      <a mat-list-item class="sidenav-content" (click)="selectComponent('timesheets')">
+        <img src="../../assets/Images/navbar_images/Timesheets.png" alt="timesheetsimage"> Timesheets</a>
+      <a mat-list-item class="sidenav-content" (click)="selectComponent('inbox')">
+        <img src="../../assets/Images/navbar_images/Inbox.png" alt="inboximage"> Inbox</a>
+      <a mat-list-item class="sidenav-content" (click)="selectComponent('filemanager')">
+        <img src="../../assets/Images/navbar_images/Filemanager.png" alt="filemanagerimage"> File Manager</a>
+      <a mat-list-item class="sidenav-content" (click)="selectComponent('reports')">
+        <img src="../../assets/Images/navbar_images/Reports.png" alt="reportsimage"> Reports & Analytics</a>
+      <a mat-list-item class="sidenav-content" (click)="selectComponent('usermanagement')">
+        <img src="../../assets/Images/navbar_images/User-settings.png" alt="usermanagementimage"> User Management</a>
+      <a mat-list-item class="sidenav-content" (click)="selectComponent('tickets')">
+        <img src="../../assets/Images/navbar_images/Tickets.png" alt="ticketsimage"> Tickets</a>
+      <a mat-list-item class="sidenav-content" (click)="selectComponent('meetings')">
+        <img src="../../assets/Images/navbar_images/Meetings.png" alt="meetings"> Meetings</a>
+      <a mat-list-item class="sidenav-content" (click)="selectComponent('settings')">
+        <img src="../../assets/Images/navbar_images/Settings.png" alt="settings"> Settings</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="navbar">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">
+          menu
+        </mat-icon>
+      </button>
+
+      <span class="nav-profile-card-spacer"></span>
+      <mat-card class="nav-profile-card">
+        <mat-card-header>
+          <div mat-card-avatar class="nav-profile-picture"></div>
+          <mat-card-title class="nav-profile-name">Angela May</mat-card-title>
+          <mat-card-subtitle class="nav-profile-designation">Project Manager</mat-card-subtitle>
+          <mat-icon class="nav-profile-dropdown">keyboard_arrow_down</mat-icon>
+        </mat-card-header>
+      </mat-card>
+    </mat-toolbar>
+    <app-dashboard *ngIf="componentSelected==='dashboard'"></app-dashboard>
+    <app-project-all *ngIf="componentSelected==='projects'"></app-project-all>
+    <app-project-details *ngIf="componentSelected==='project management tool'"></app-project-details>
+    <app-workitems *ngIf="componentSelected==='workitems'"></app-workitems>
+  </mat-sidenav-content>
+</mat-sidenav-container>

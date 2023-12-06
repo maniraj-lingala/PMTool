@@ -1,0 +1,67 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6 col-md-12 box-shadow-right-side login-page-padding-container">
+            <!-- Pro Manage logo -->
+            <img src="../../assets/Images/logos/logo.png" alt="Loginpage_xLogo">
+
+            <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+                <div class="container mt-3 pt-5">
+                    <div class="row ">
+                        <p class="stepper-tab1 me-2"></p>
+                        <p class="stepper-tab2 me-2"></p>
+                        <p class="stepper-tab2 me-2"></p>
+                        <p class="stepper-tab2"></p>
+                    </div>
+                </div>
+                <div class="my-2">
+                    <p class="profile-heading">Let's get to know you more!</p>
+                </div>
+                <div class=" d-flex align-items-center my-3 ">
+                    <div class="me-3">
+                        <img src="../../../assets/Images/profile_images/profilePicture.png" alt="profilePicture">
+                    </div>
+                    <div>
+                        <p class="profile-picture">Profile Picture</p>
+                        <input type="file" id="file" #fileInput (change)="onFileSelected(fileInput)"
+                            accept=" .jpeg, .png" />
+                        <label for="file" class="Upload-profile p-3">
+                            <img src="../../../assets/Images/icons/upload.png" alt="upload-image" width="14.699px"
+                                height="14.694px">&nbsp;<p class="upload-image p-3 pt-4">Uplaod Image</p>
+                        </label>
+                        <p>*.png, *.jpeg files upto 10MB</p>
+                    </div>
+                </div>
+                <div>
+                    <app-email-field></app-email-field>
+                </div>
+                <div class="row">
+                    <mat-form-field class="col-6 input float-first" appearance="outline">
+                        <mat-label>First Name</mat-label>
+                        <input type="text" matInput formControlName="firstname" title="firstName">
+                    </mat-form-field>
+                    <mat-form-field class=" col-6 input float-end" appearance="outline">
+                        <mat-label>Last Name</mat-label>
+                        <input type="text" matInput formControlName="lastname" title="lastName">
+                    </mat-form-field>
+                </div>
+                <div class="row">
+                    <mat-form-field class="input" appearance="outline">
+                        <mat-label>Company Name</mat-label>
+                        <input type="text" matInput formControlName="companyname" title="companyName">
+                    </mat-form-field>
+                </div>
+                <div>
+                    <app-password-field></app-password-field>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <button class="signup-adddetails-continue-button" routerLink="/appPurposeDetails" type="submit"
+                            value="submit">Continue &nbsp;&nbsp; <img src="../../../assets/Images/icons/rightarrow.png"
+                                alt="arrow"> </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

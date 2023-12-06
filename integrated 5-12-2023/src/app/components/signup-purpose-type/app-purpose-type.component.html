@@ -1,0 +1,44 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-6 col-md-12 box-shadow-right-side login-page-padding-container">
+			<!-- Pro Manage logo -->
+			<img src="../../assets/Images/logos/logo.png" alt="Loginpage_xLogo">
+			<div class="container mt-3 pt-5">
+				<div class="row ">
+					<p class="stepper-tab1 me-2"></p>
+					<p class="stepper-tab1 me-2"></p>
+					<p class="stepper-tab1 me-2"></p>
+					<p class="stepper-tab2"></p>
+				</div>
+			</div>
+			<div class="row my-2">
+				<p class="heading">How are you planning on using ProManage?</p>
+			</div>
+			<div class="row ">
+				<mat-radio-group color="primary" class="d-flex flex-column" [(ngModel)]="usingProManage">
+					<mat-radio-button *ngFor="let item of ProManageOptions" [value]="item">
+						<div>{{item}} </div>
+						<div *ngIf="usingProManage===item">
+							<p>What do you want to do {{usingProManage}}?</p>
+							<mat-form-field appearance="outline" color="primary">
+								<mat-label>Select an option</mat-label>
+								<mat-select>
+									<mat-option>None</mat-option>
+									<mat-option value="option1">Option 1</mat-option>
+									<mat-option value="option2">Option 2</mat-option>
+									<mat-option value="option3">Option 3</mat-option>
+								</mat-select>
+
+							</mat-form-field>
+						</div>
+					</mat-radio-button>
+				</mat-radio-group>
+			</div>
+			<div class="mt-4">
+				<button class="stepper-back me-3" routerLink="/appPurposeDetails"> <img
+						src="../../../assets/Images/icons/leftArrow.png" alt="" class="me-1">Back</button>
+				<button class="stepper-next border-0" routerLink="/appWorkspacName">Next &nbsp;&nbsp; <img
+						src="../../../assets/Images/icons/rightarrow.png" alt="arrow"> </button>
+			</div>
+		</div>
+	</div>

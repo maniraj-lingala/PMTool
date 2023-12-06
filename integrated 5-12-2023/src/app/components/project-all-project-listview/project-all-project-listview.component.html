@@ -1,0 +1,81 @@
+<!-- project-table.component.html -->
+<table border="1" style="width: 100%;" class="table-container mt-3">
+  <thead>
+    <tr>
+      <th></th>
+      <th> <input type="checkbox" [(ngModel)]="selectAll" (change)="selectAllRows()" /></th>
+      <th class="pe-4">ProjectId</th>
+      <th>Project name <mat-icon class="pt-1">arrow_downward</mat-icon></th>
+      <th>Description</th>
+      <th>Project duration</th>
+      <th>Project health</th>
+      <th>Project Manager</th>
+      <th class="ps-5">Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let project of projects">
+      <td> <img src="../../../assets/Images/icons/Group 47103.png" class="sixdoticon " alt=""></td>
+      <td>
+        <input type="checkbox" [(ngModel)]="project.selected" />
+      </td>
+      <td><b>#{{ project.id }}</b></td>
+      <td (click)="openProject(project.title)">
+        <a style="text-decoration: none; color: inherit;">{{ project.projectname }}</a>
+      </td>
+      <td>{{ project.description | slice:0:15 }}{{ project.description.length > 50 ? '...' : '' }}</td>
+      <td>{{ project.startdate }} <span style="color: crimson;">{{project.enddate}}</span></td>
+      <td class="d-flex mt-4">
+        <div class="me-2  ">
+          <div *ngIf="project.progressValue > 99; else elseBlock" class="spinner-container">
+            <mat-progress-spinner class="spinner-with-completevalue" value={{project.progressValue}} strokeWidth="5"
+              diameter="30"></mat-progress-spinner>
+          </div>
+          <ng-template #elseBlock>
+            <mat-progress-spinner class="spinner-with-uncompletevalue me-2" value={{project.progressValue}}
+              strokeWidth="5" diameter="30"></mat-progress-spinner>
+          </ng-template>
+        </div>
+        <div class="pt-1"><b>{{ project.progressValue }}%</b></div>
+      </td>
+      <td style="color:#0F0F0F;">
+        {{ project.teamleadname}}</td>
+      <td>
+        <div>
+          <!-- Progress status -->
+          <div *ngIf="project.progressValue<100 ;else elseblock">
+            <p> <span style="color: orangered;">In Progress
+              </span><span class="ms-5">{{project.progressValue}}%</span> </p>
+          </div>
+          <ng-template #elseblock>
+            <p>
+              <span style="color: green;">Completed </span><span class="ms-5">{{ project.progressValue }}%</span>
+            </p>
+          </ng-template>
+        </div>
+        <div>
+          <!-- Progress bar -->
+          <div *ngIf="project.progressValue > 99; else elseBlocky">
+            <mat-progress-bar class="progressbar-with-complete-value"
+              value={{project.progressValue}}></mat-progress-bar>
+          </div>
+          <ng-template #elseBlocky>
+            <mat-progress-bar class="progressbar-with-incomplete-value"
+              value={{project.progressValue}}></mat-progress-bar>
+          </ng-template>
+        </div>
+      </td>
+      <td>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="viewItem()">View</button>
+          <button mat-menu-item (click)="editItem()">Edit</button>
+          <button mat-menu-item (click)="deleteItem(project)">Delete</button>
+        </mat-menu>
+      </td>
+    </tr>
+  </tbody>
+</table>

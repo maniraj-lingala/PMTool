@@ -1,0 +1,20 @@
+<div class="rectangle-frame">
+	<app-toolbar-element-second></app-toolbar-element-second>
+	<mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start" class="project-tabgroup mt-3 ms-3">
+		<mat-tab style="color: #666666;" label="All">
+			<app-project-all-searchheader></app-project-all-searchheader>
+			<div *ngIf="currentView === 'grid'; else cardView">
+				<app-project-all-project-cards></app-project-all-project-cards>
+			</div>
+			<ng-template #cardView>
+				<div class="overflow-scroll">
+					<app-project-all-project-listview></app-project-all-project-listview>
+				</div>
+			</ng-template>
+		</mat-tab>
+		<mat-tab label="Ongoing"></mat-tab>
+		<mat-tab label="Completed"></mat-tab>
+		<mat-tab label="On Hold"></mat-tab>
+		<mat-tab label="Upcoming"></mat-tab>
+	</mat-tab-group>
+</div>

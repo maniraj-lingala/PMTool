@@ -1,0 +1,84 @@
+<div class="teamSearchContainer">
+    <!-- search field -->
+    <app-input-search-field></app-input-search-field>
+    <div>
+        <!-- filter button -->
+        <app-button-filter></app-button-filter>
+        <!-- document add button  -->
+        <button mat-raised-button class="button" (click)="openDialog()" class="addMemberButton">
+            <span>
+                <img src="/assets/Images/icons/addIcon.png" alt="addIcon" />
+                New Document
+            </span>
+        </button>
+    </div>
+</div>
+<div class="m-3">
+    <div class="container">
+        <span class="fw-bold">Quick Access </span>
+    </div>
+    <!-- displaying uploaded files -->
+    <div class="container ">
+        <div class="row mx-1 ">
+            <mat-card class="document-files mt-3" *ngFor="let f of documentsFiles | async">
+                <div class="fileItemText d-flex align-items-center my-auto">
+                    <div class="w-100 text-start d-flex align-items-center">
+                        <img src={{f.image}} alt="pdf" width="30px" height="30px" class="me-2">
+                        <span class="file-name">{{f.file.name}}</span>
+                        <span class="example-spacer"></span>
+                        <img class="me-4" src="../../../assets/Images/icons/action-horizontal.png" alt="ds">
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+    <!-- documents folders -->
+    <div class="container-fluid mt-3">
+        <span class="fw-bold">Folders</span>
+        <div class=" d-flex">
+            <mat-card class="document-agile-folder-card mt-3 me-3">
+                <div class="document-agile-folder d-flex align-items-center my-auto">
+                    <img src='../../../assets/Images/icons/folder.png' width="30px" height="30px" alt="pdf"
+                        class="me-2">
+                    <span>Agile Method</span>
+                    <span class="example-spacer"></span>
+                    <img class="me-4" src="../../../assets/Images/icons/action-horizontal.png" alt="ds">
+                </div>
+            </mat-card>
+            <mat-card class="document-agile-folder-card mt-3 me-3">
+                <div class="document-agile-folder d-flex align-items-center my-auto">
+                    <img src='../../../assets/Images/icons/folder.png' width="30px" height="30px" alt="pdf"
+                        class="me-2">
+                    <span>Agile Method</span>
+                    <span class="example-spacer"></span>
+                    <img class="me-4" src="../../../assets/Images/icons/action-horizontal.png" alt="ds">
+                </div>
+            </mat-card>
+        </div>
+    </div>
+    <!-- documents are shown inte table format  -->
+    <!-- document is shared or secured also displayed in table -->
+    <!-- document uploaded by  -->
+    <div class="container mt-3 ">
+        <span class="fw-bold">Files</span>
+        <table class="documents-details-table mt-3">
+            <tr class="documents-details-table-header">
+                <th class="p-3">File Name <img src="../../../assets/Images/icons/downarrow.png" alt="down-arrow"></th>
+                <th>Activity <img src="../../../assets/Images/icons/downarrow.png" alt="down-arrow"></th>
+                <th>Shared By</th>
+                <th>Access To</th>
+                <th>Actions</th>
+            </tr>
+            <tr class="documents-details-table-data ms-2" *ngFor="let f of documentsFiles | async">
+                <td class="p-3"><img src='{{f.image}}' width="30px" height="30px" alt="pdf" class="me-2">{{f.file.name}}
+                </td>
+                <td>Shared</td>
+                <td><img class="document-profile" src="../../../assets/Images/profile_images/userprofile.png"
+                        alt="image" width="36" height="41">siva</td>
+                <td>Access</td>
+                <td><button><img src="../../../assets/Images/icons/action-vertical.png" alt="down-arrow"></button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

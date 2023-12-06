@@ -1,0 +1,57 @@
+<mat-toolbar class="projectDetailsHeader">
+    <mat-card-header>
+        <mat-card-title class="projectTitle">Project Management Tool
+            <mat-icon>keyboard_arrow_down</mat-icon>
+        </mat-card-title>
+        <mat-card-subtitle class="projectSubTitle">
+            <span class="sidenavTabName">Projects </span>
+            <mat-icon>keyboard_arrow_right</mat-icon> <span>Project Management Tool</span>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <span class="example-spacer"></span>
+    <mat-card-header class="projectHeaderButtons">
+        <div class="gap-2">
+            <button type="button" class="edit-button btn me-3">
+                <div class="d-flex align-items-center">
+                    <img src="../../assets/Images/icons/edit.png" alt="Edit icon" class="projectHeaderImage">
+                    <span>Edit Project</span>
+                </div>
+            </button>
+            <button type="button" class="delete-button btn">
+                <div class="d-flex align-items-center">
+                    <img src="../../assets/Images/icons/delete.png" alt="Delete icon" class="projectHeaderImage">
+                    <span>Delete Project</span>
+                </div>
+            </button>
+        </div>
+    </mat-card-header>
+    <mat-card-header class="toggleProjectHeaderButtons">
+        <div class="gap-3 d-flex d-lg-none">
+            <span><img src="../../../assets/Images/icons/edit.png" alt="Edit icon"></span>
+            <span><img src="../../../assets/Images/icons/delete.png" alt="Delete icon"></span>
+        </div>
+    </mat-card-header>
+</mat-toolbar>
+<div style="margin: 20px">
+    <div style="border: 0.5px solid lightgrey">
+        <mat-tab-group>
+            <mat-tab label="Overview" class="matWidth"><app-projects-overview-grid-items></app-projects-overview-grid-items></mat-tab>
+            <mat-tab label="Work Items"></mat-tab>
+            <mat-tab label="Changes"> <app-project-changes></app-project-changes> </mat-tab>
+            <mat-tab label="Risks"><app-projects-risks-details-table></app-projects-risks-details-table></mat-tab>
+            <mat-tab label="Team">
+                <app-team></app-team>
+            </mat-tab>
+            <mat-tab label="Chat"></mat-tab>
+            <mat-tab label="Meetings"></mat-tab>
+            <mat-tab label="Documents">
+                <app-projects-documents></app-projects-documents>
+            </mat-tab>
+            <mat-tab label="Reports & Analytics"></mat-tab>
+            <mat-tab label="Environment"></mat-tab>
+            <mat-tab label="Releases"></mat-tab>
+            <mat-tab label="Recent Activity"></mat-tab>
+            <mat-tab label="Settings"></mat-tab>
+        </mat-tab-group>
+    </div>
+</div>

@@ -1,0 +1,379 @@
+//Projects Risks
+
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+// ------------------------Project-risk-table-----------------------------
+.matTable {
+    background-color: #F6F6F6 !important;
+}
+
+// ------------------------- Searchbar component --------------------------
+.searchNavbar {
+    background-color: $google;
+    display: flex;
+    padding-top: $text20;
+    margin-bottom: $text18;
+    width: 100%;
+    // border: 1px solid red;
+}
+
+.search-field {
+    margin-left: 1.25rem;
+    padding-left: 2.5rem;
+    background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
+    background-size: 20px;
+    border-radius: 4px;
+    width: 21.5rem;
+    height: 3rem;
+    border: 1px solid $border;
+}
+
+//short by properties
+.shortby {
+    display: flex;
+    background-color: $google;
+    width: 9.56rem;
+    height: 2.5rem;
+    border-radius: 4px;
+    border: 1px solid #E0E0E0;
+    margin-right: 0.625rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.Sortbytext {
+    font-weight: $medium;
+    font-size: $text18;
+}
+
+.filter {
+    display: flex;
+    background-color: $google;
+    width: 6.687rem;
+    height: 2.5rem;
+    border-radius: 4px;
+    border: 1px solid #E0E0E0;
+}
+
+.filtertext {
+    font-weight: $medium;
+    font-size: $text18;
+    line-height: normal;
+}
+
+.divFor-sortby-filter-excel-addrisk {
+    display: flex;
+    background-color: white;
+    gap: $text20;
+    margin-left: auto;
+}
+
+.exportExcelButton {
+    width: 9.56rem;
+    height: 2.5rem !important;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+// --------------------------- Add-Risk component ---------------------------
+.addrisk-dialog-button-close {
+    width: 0.812rem;
+    height: 0.812rem;
+    flex-shrink: 0;
+    float: right;
+    margin: 10px;
+    display: inline;
+}
+
+.riskTitle {
+    border-radius: 4px;
+    background-color: $google;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.add-risk-input-form-field {
+    border-radius: 4px;
+    background-color: $google;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.riskTitle-input-field {
+    height: 3rem;
+    width: 100%;
+    border: 1px solid $border;
+    border-bottom: none;
+    border-radius: 4px;
+}
+
+.riskTitle-description-field {
+    text-align: start;
+    padding-bottom: 6rem;
+    width: 100%;
+    border: 1px solid $border;
+    border-top: none;
+    border-radius: 4px;
+}
+
+.input-form-field {
+    border: 1px solid $border;
+    border-radius: 4px;
+    width: 100%;
+    height: 3.5rem;
+    // margin-top: 2rem;
+    // margin-left: 1.5rem;
+}
+
+.maticon-container {
+    width: auto;
+    height: 2.25rem;
+    border: 1px solid $border;
+
+}
+
+.button-cancel-risk {
+    display: flex;
+    float: right;
+    gap: 10px;
+    margin-top: 65px !important;
+}
+
+
+
+// ------------------------ risk-details ---------------------------------
+
+.riskDetail-toolbar {
+    background-color: $google !important;
+
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+// .riskDetails-container {
+//     font-family: sans-serif;
+//     width: 100%;
+//     height: 100vh;
+//     flex-shrink: 0;
+//     background-color: #FFF;
+//     border: 1px solid red;
+// }
+
+.riskDetails-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-family: Source Sans Pro;
+    font-size: $text18;
+    font-weight: $bold;
+    line-height: normal;
+}
+
+.memberId {
+    width: 6rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+    margin-left: 1rem;
+    border-radius: 4px;
+    border: 1px solid #F2F2F2;
+    background: #F8F8F8;
+}
+
+.memberId span {
+    font-size: $text18;
+    font-weight: $bold;
+    padding-left: 1rem;
+}
+
+#riskDetails-editButton {
+    border: 1px solid #E3F4FF;
+    color: $secondary;
+    background-color: #F0F9FF;
+}
+
+#riskDetails-deleteButton {
+    border: 1px solid #FFE3E3;
+    color: #F03838;
+    background-color: $negative-50;
+}
+
+.riskDetails-content {
+    width: 90% !important;
+    height: fit-content;
+    border: 1px solid $border;
+    border-radius: 4px;
+    margin: 2rem;
+}
+
+.riskDetails-content p {
+    margin: 15px 20px;
+}
+
+.riskDetails-content h3 {
+    height: 1.437rem;
+    width: 17.187rem;
+    font-weight: $bold;
+    color: $text1;
+}
+
+.riskDetails-description {
+    font-weight: $medium;
+    font-size: $text18;
+}
+
+.riskDetails-footer {
+    justify-content: space-between;
+}
+
+// --------------------------MEDIA QUERY----------------------------------
+// for extra small screen
+@media screen and (max-width: 576px) {
+    .searchNavbar {
+        display: block;
+    }
+
+    .search-field {
+        width: 100%;
+    }
+
+    .divFor-sortby-filter-excel-addrisk {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .risk-table {
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    .add-risk-input-form-field {
+        display: block !important;
+    }
+
+    .riskDetails-button {
+        display: none !important;
+    }
+}
+
+// for small screen
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .searchNavbar {
+        display: block;
+    }
+
+    .search-field {
+        width: 100%;
+    }
+
+    .divFor-sortby-filter-excel-addrisk {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .risk-table {
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    .add-risk-input-form-field {
+        display: block !important;
+    }
+
+    .input-form-field {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .riskDetails-button {
+        display: none !important;
+    }
+}
+
+// for medium screen
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .searchNavbar {
+        display: block;
+    }
+
+    .search-field {
+        width: 100%;
+    }
+
+    .divFor-sortby-filter-excel-addrisk {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .risk-table {
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    .add-risk-input-form-field {
+        display: block !important;
+    }
+
+    .input-form-field {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .riskDetails-button {
+        display: none !important;
+    }
+}
+
+// for large screen
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .searchNavbar {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .input-form-field {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .riskDetails-button {
+        display: none !important;
+    }
+}
+
+// for extra large screen
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+
+    // .searchNavbar {
+    //         display: inline;
+    //         width: 100%;
+    //     }
+    .input-form-field {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .toggleProjectHeaderButtonsSmallScreen {
+        display: none !important;
+    }
+}
+
+// for extra extra large
+@media screen and (min-width: 1400px) {
+    .input-form-field {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .toggleProjectHeaderButtonsSmallScreen {
+        display: none !important;
+    }
+}

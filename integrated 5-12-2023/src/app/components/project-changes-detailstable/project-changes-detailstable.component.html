@@ -1,0 +1,87 @@
+<table mat-table [dataSource]="dataSource" class="changes-mat-table">
+
+    <!-- Change request Id Column -->
+    <ng-container matColumnDef="ChangeRequestId">
+      <th mat-header-cell *matHeaderCellDef class="changes-table-header">Change Request
+        Id<img src="../../../assets/Images/icons/downarrow.png" alt="image" />
+      </th>
+      <td mat-cell *matCellDef="let element" class="change-request-width"> <b>{{element.ChangeRequestId}}</b></td>
+    </ng-container>
+  
+    <!-- ChangedItem Column -->
+    <ng-container matColumnDef="ChangedItem">
+      <th mat-header-cell *matHeaderCellDef class="changes-table-header">Changed Item<img
+          src="../../../assets/Images/icons/downarrow.png" alt="image" /></th>
+      <td mat-cell *matCellDef="let element" class="change-item-width"> {{element.ChangedItem}} </td>
+    </ng-container>
+  
+    <!-- ChangedTo Column -->
+    <ng-container matColumnDef="ChangedTo">
+      <th mat-header-cell *matHeaderCellDef class="changes-table-header">Changed To<img
+          src="../../../assets/Images/icons/downarrow.png" alt="image" /></th>
+      <td mat-cell *matCellDef="let element" class="change-to-width"> {{element.ChangedTo}} </td>
+    </ng-container>
+  
+    <!-- RequestedBy Column -->
+  
+  
+    <ng-container matColumnDef="RequestedBy">
+      <th mat-header-cell *matHeaderCellDef class="changes-table-header">Requested By<img
+          src="../../../assets/Images/icons/downarrow.png" alt="image" /></th>
+      <td mat-cell *matCellDef="let element" class="Requestedby-name"><img [src]="element.image" class="rounded-circle"
+          alt="image">{{element.RequestedBy}}</td>
+    </ng-container>
+    <!-- ApprovedDate column -->
+    <ng-container matColumnDef="ApprovedDate">
+      <th mat-header-cell *matHeaderCellDef class="changes-table-header">Approved Date<img
+          src="../../../assets/Images/icons/downarrow.png" alt="image" /></th>
+      <td mat-cell *matCellDef="let element"> {{element.ApprovedDate}} </td>
+    </ng-container>
+    <!-- Impact Level column -->
+    <ng-container matColumnDef="ImpactLevel">
+  
+      <th mat-header-cell *matHeaderCellDef class="changes-table-header">Impact Level<img
+          src="../../../assets/Images/icons/downarrow.png" alt="image" /></th>
+      <!-- Inside your table cell for ImpactLevel -->
+      <td mat-cell *matCellDef="let element" [ngStyle]="{ 'color': getImpactLevelColor(element.ImpactLevel) }">
+        {{element.ImpactLevel}}
+      </td>
+    </ng-container>
+    <!-- ChangedBy column -->
+    <ng-container matColumnDef="ChangedBy">
+      <th mat-header-cell *matHeaderCellDef class="changes-table-header">Changed By<img
+          src="../../../assets/Images/icons/downarrow.png" alt="image" /></th>
+      <td mat-cell *matCellDef="let element" class="change-by-width"><img [src]="element.image1" class="rounded-circle" alt="image">
+        {{element.ChangedBy}} </td>
+    </ng-container>
+    <!-- ChangedStatus column -->
+    <ng-container matColumnDef="ChangedStatus">
+      <th mat-header-cell *matHeaderCellDef class="changes-table-header">Changed Status<img
+          src="../../../assets/Images/icons/downarrow.png" alt="image" /></th>
+      <td mat-cell *matCellDef="let element" [ngStyle]="{ 'color': getImpactLevelColor(element.ChangedStatus)}">
+        {{element.ChangedStatus}}
+      </td>
+    </ng-container>
+    <!-- Actions column -->
+    <ng-container matColumnDef="Actions">
+      <th mat-header-cell *matHeaderCellDef class="changes-table-header">Actions</th>
+      <td mat-cell *matCellDef="let element" class="Actions-width">
+        <!--buttons for action item  -->
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>View</button>
+          <button mat-menu-item>Edit
+            <img src="../../../assets/Images/icons/edit.png" alt="edit">
+          </button>
+          <button mat-menu-item>Delete
+            <img src="../../../assets/Images/icons/delete.png" alt="delete">
+          </button>
+        </mat-menu>
+      </td>
+    </ng-container>
+    <!--Displaying the columns and rows  -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>

@@ -1,0 +1,68 @@
+<div class="row change-Details ">
+    <div class="col-xl-6">Change Details
+        <span class="addchanges-IDEM-CR">IDEM-CR-0002</span>
+    </div>
+    <!-- <span class="edit-delete-buttons"> -->
+    <div class="col-xl-6 text-end">
+         <button mat-button class="addchanges-delete" alt="button"><img
+                src="../../../assets/Images/icons/delete.png" alt="delete">
+            Delete</button>
+        <button mat-button class="addchanges-edit " alt="button"><img
+                src="../../../assets/Images/icons/edit.png" alt="edit">
+            Edit</button>
+       
+    </div>
+</div>
+<hr>
+<!-- second grid -->
+<div class="row">
+    <div class="col-8">
+        <!--calling the description selector  -->
+        <app-project-changes-details-description></app-project-changes-details-description>
+        <!--  -->
+        <p class="addchanges-change-item">Changed Item :<span class="addchange-module">User Authentication Module</span>
+        </p>
+        <!--  -->
+        <p class="addchanges-changed-to">Changed To :<span class="addchanges-user-MFA">User Authentication with MFA,
+                Password Strengthening, Integrating IAM System</span></p>
+        <p class="addchanges-pricing">Pricing Budget :<span class="addchanges-">-</span></p>
+        <hr>
+        <p class="addchanges-Target-Date">Target Date :<span class="addchanges-date-year">2 Jan 2023</span>
+            <span class="addchanges-Impact-Level">Impact Level :</span><span class="addchanges-Level">High</span>
+            <span class="addchanges-Status">Status :</span><span class="addchanges-open-close">Open</span>
+        </p>
+        <hr>
+        <!-- calling cards from selector -->
+        <app-project-changes-details-cards></app-project-changes-details-cards>
+    </div>
+    <!-- comments & Recent activities grid -->
+
+    <div class="col-4">
+        <span>
+            <mat-tab-group class="comments-recent-tabs">
+                <mat-tab label="Comments">
+                    <p class="addchanges-comments mt-1"> <img src="../../../assets/Images/profile_images/employee1.png"
+                            class="rounded-circle" alt="lucyhales" /> Lucy Hales</p>
+                    <p class="addchanges-comment-1"> The typography choices look great and are consistent.
+                        However, I noticed that the line height in some
+                        headings could be adjusted for better readability.</p>
+                    <p>12/03/2023 <span>2:45 pm</span></p>
+                    <br>
+                    <p class="addchanges-comments"> <img src="../../../assets/Images/profile_images/employee1.png"
+                            class="rounded-circle" alt="lucyhales" /> Lucy Hales</p>
+                    <p class="addchanges-comment-2">The typography choices look great and are consistent.
+                        However, I noticed that the line height in some
+                        headings could be adjusted for better readability.</p>
+                    <p>12/03/2023 <span>2:45 pm</span></p>
+                    <br>
+                </mat-tab>
+                <mat-tab label="Recent Activity">No recent activity </mat-tab>
+            </mat-tab-group>
+        </span>
+        <div class="addchanges-writesomething">
+            <img src="../../../assets/Images/profile_images/employee1.png" alt="image">
+            <input type="text" placeholder="Write Something">
+            <img src="../../../assets/Images/icons/messaage sent.png" alt="image">
+        </div>
+    </div>
+</div>

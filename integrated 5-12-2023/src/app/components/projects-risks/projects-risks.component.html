@@ -1,0 +1,25 @@
+<div class="searchNavbar">
+
+    <span ><input type="search" class="search-field justify-content-center" placeholder="Search"></span>
+    
+      <div class="divFor-sortby-filter-excel-addrisk">
+        <span class="flex-spacer"></span>
+        <div class="shortby">
+          <span class="Sortbytext">Sort By</span>
+          <mat-icon class="my-auto ms-1">keyboard_arrow_down</mat-icon>
+        </div>
+    
+        <div class="filter">
+          <img class="filterIcon ms-3 my-auto" src="../../../assets/Images/icons/filter.png" alt="Image filter">
+          <span class="filtertext">Filter</span>
+        </div>
+    
+        <div>
+          <button mat-flat-button color="primary" class="exportExcelButton">Export to Excel</button>
+        </div>
+    
+        <button mat-flat-button color="primary" class="addRiskButton exportExcelButton" 
+          (click)="openAddRisk()"><mat-icon>add_circle_outline</mat-icon>Add Risk
+        </button>
+        </div>
+    </div>

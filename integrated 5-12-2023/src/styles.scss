@@ -1,0 +1,1867 @@
+@import "src/assets/scss/custom.scss";
+@import '../node_modules/font-awesome/css/font-awesome.css';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+//SIDE NAVBAR AND TOP NAVBAR COMPONENTS
+.sidenav-container {
+  height: 100vh;
+  width: 100%;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+#pro,
+#manage {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+#pro {
+  margin-left: 16px;
+  color: $primary-500;
+}
+
+#manage {
+  color: $accent2-400 ;
+}
+
+.navbar {
+  width: 1917px;
+  height: 70px !important;
+  flex-shrink: 0;
+  background: #FFFFFF !important;
+  border-bottom: 1px solid #F1F1F1;
+}
+
+.sidenav {
+  width: 288px;
+  height: 100vh;
+}
+
+.sidenav-content {
+  height: 49px !important;
+  font-size: $text18;
+  font-weight: $regular;
+}
+
+.sidenav-content img {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  margin-left: 16px;
+  margin-right: 10px !important;
+}
+
+
+.nav-profile-card {
+  width: 262px;
+  height: 56px;
+  flex-shrink: 0;
+  justify-content: center;
+  float: right !important;
+  background-color: $lineDivider !important;
+  border-radius: 4px;
+  border: 1px solid #E9E9E9;
+  background: #EFF0F1;
+}
+
+.nav-profile-card-spacer {
+  flex: 1 1 auto;
+}
+
+.nav-profile-picture {
+  background-image: url(assets/images/profile_images/userprofile.png);
+  background-size: cover;
+}
+
+.nav-profile-name {
+  color: var(--text-color-1, #0F0F0F);
+  font-family: $app-font;
+  font-size: $text18;
+  font-style: normal;
+  font-weight: $bold;
+  line-height: normal;
+}
+
+.nav-profile-designation {
+  font-size: $text14;
+  font-weight: $regular;
+  margin-bottom: 20px;
+}
+
+.nav-profile-dropdown {
+  margin-left: 30px;
+}
+
+.toolbar-elements {
+  height: 52px !important;
+}
+
+//EMAIL & PASSWORD COMPONENTS
+
+.login-input-field {
+  display: flex;
+  width: $width-519;
+  height: $width-50;
+  border-radius: 4px;
+  border: 1px;
+  flex-shrink: 0;
+}
+
+.mdc-floating-label--required:not(.mdc-floating-label--hide-required-marker)::after {
+  content: " " !important;
+}
+
+.mdc-text-field--outlined.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-floating-label,
+.mdc-text-field--outlined.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-floating-label--float-above {
+  color: $text3 !important;
+}
+
+//SOCIAL MEDIA COMPONENT
+
+.social-media-button {
+  font-family: $app-font;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border: 2px solid $text4;
+  margin-bottom: $text16;
+  justify-content: center;
+  align-items: center;
+}
+
+.google-button {
+  background-color: $google;
+  color: var(--text-color-1, #0F0F0F);
+}
+
+.facebook-button {
+  background-color: $facebook;
+  color: var(--text-color-1, #FFFFFF);
+}
+
+//LOGIN PAGE - LEFT CONTAINER
+
+.box-shadow-right-side {
+  background: #FFF;
+  box-shadow: 0px 2px 8px 0px rgba(55, 55, 55, 0.08);
+  height: 100vh;
+}
+
+.login-page-padding-container {
+  padding: 1rem 1rem;
+}
+
+.login-page-checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: $width-519;
+}
+
+.account-check-container {
+  display: flex;
+  justify-content: center;
+  width: $width-519;
+}
+
+.horizontal-text-decorator {
+  display: flex;
+  flex-direction: row;
+  width: $width-519;
+  color: $text6;
+}
+
+.horizontal-text-decorator:before,
+.horizontal-text-decorator:after {
+  content: " ";
+  flex: 1 1;
+  border-bottom: 2px solid $text5;
+  margin: auto;
+}
+
+//LOGIN PAGE - RIGHT CONTAINER
+
+.login-right-content {
+  font-size: $text18;
+  font-weight: $medium;
+  color: $text7;
+  text-align: justify;
+}
+
+.login-right-content h1 {
+  font-size: $headline24;
+  color: $text1;
+  font-weight: $black;
+}
+
+.login-right-content h4 {
+  font-weight: $bold;
+  margin-top: 2rem;
+}
+
+.login-right-content h3,
+.login-checkinbox-message {
+  color: $text8;
+  margin-bottom: 2rem;
+}
+
+.login-right-content h2 {
+  color: $primary;
+  font-weight: $bold;
+}
+
+//CHECK-IN-BOX 
+
+
+
+//SignUp Add Details Page
+input[type="file"] {
+  display: none;
+}
+
+.profile-heading {
+  color: var(--text-color-1, $text1);
+  font-family: Source Sans Pro;
+  font-size: 1.35rem;
+  font-style: normal;
+  font-weight: $black;
+  line-height: normal;
+}
+
+.heading {
+  color: var(--text-color-1, #0F0F0F);
+  font-family: Source Sans Pro;
+  font-size: 1.35rem;
+  font-style: normal;
+  font-weight: $black;
+  line-height: normal;
+}
+
+.stepper-back {
+  display: inline;
+  width: 6.375rem;
+  padding: 0.65rem $text20;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: $text18;
+  border-radius: 0.25rem;
+  background-color: $background-color;
+  border: 1px solid $primary-500;
+}
+
+.stepper-tab1 {
+  width: 3.5rem;
+  height: 0.35rem;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background: var(--accent-1-accent-1400, #33ABA0);
+}
+
+.stepper-tab2 {
+  width: 56px;
+  height: 6px;
+  flex-shrink: 0;
+  border-radius: 0.25rem;
+  background: #EDEDED;
+}
+
+.stepper-next {
+  display: inline;
+  width: 8.3rem;
+  color: $background ;
+  padding: 0.65rem $text20;
+  justify-content: center;
+  font-size: $text18;
+  border-radius: 0.25rem;
+  background: $primary-500;
+}
+
+.signup-adddetails-continue-button {
+  display: flex;
+  width: 40.6rem;
+  padding: 0.65rem $text20;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.25rem;
+  background: $primary-500;
+  color: $background-color;
+  border: none;
+}
+
+.profile-picture {
+  color: var(--text-color-1, #0F0F0F);
+  margin-left: 0.25rem;
+  font-family: Source Sans Pro;
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: $bold;
+  line-height: normal;
+}
+
+.Upload-profile {
+  border-radius: 0.25rem;
+  border: 1px solid #C4C4C4;
+  background: #FFF;
+  width: 12.2rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.Upload-image {
+  color: var(--text-color-1, #0F0F0F);
+  font-family: Source Sans Pro;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+}
+
+//PROJECTS COMPONENT
+.projects {
+  background-color: $background-color !important;
+  background-size: cover !important;
+  min-height: 90vh;
+}
+
+// PROJECT DETAILS COMPONENT
+.projectDetailsHeader {
+  border: 1px solid $text9;
+  padding-bottom: 10px !important;
+  background-color: $background-color !important;
+}
+
+.projectTitle {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  color: $text1 !important;
+  font-size: $text18 !important;
+  font-weight: 600 !important;
+}
+
+.projectSubTitle {
+  color: $text3 !important;
+  font-size: 12px !important;
+  font-weight: 400;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.sidenavTabName {
+  text-decoration: underline;
+}
+
+//new
+
+.edit-button {
+  background-color: $positive-25 !important;
+  border: 2px solid $positive-75 !important;
+  font-size: $text16;
+  font-weight: $bold;
+  color: $secondary !important;
+}
+
+.delete-button {
+  background-color: $negative-50 !important;
+  border: 2px solid $negative-25 !important;
+  font-size: $text16;
+  font-weight: $bold;
+  color: $negative !important;
+}
+
+.projectHeaderImage {
+  height: 16px;
+}
+
+// TEAM COMPONENT
+
+
+
+
+// TEAM-DETAILS COMPONENT
+.ProjectsContainer {
+  border: 1px solid $text10;
+  background-color: $background-color !important;
+  margin: 20px;
+}
+
+.ProjectsSubContainer {
+  display: flex;
+}
+
+.teamHeadercard {
+  text-align: start;
+  text-wrap: wrap;
+}
+
+.link {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+
+
+.matCardStyle {
+  width: 240px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-height: 70px;
+  padding: 0px 20px;
+  margin-top: 20px;
+}
+
+.mat-mdc-table {
+  width: 20%;
+  max-height: 500px;
+  overflow: auto;
+}
+
+.mat-column-name {
+  height: 100px;
+}
+
+.mat-progress-bar-background {
+  background-color: orange;
+}
+
+.teamCaption {
+  color: $text1 !important;
+  font-weight: 600 !important;
+}
+
+.totalMembers {
+  color: $text2 !important;
+  font-weight: 400 !important;
+}
+
+.teamDescription {
+  color: $text3 !important;
+  font-weight: 400 !important;
+}
+
+.teamViewButton {
+  color: $secondary !important;
+  cursor: pointer;
+}
+
+.linkText {
+  text-decoration-line: underline;
+}
+
+.matCardContainer {
+  width: 220px !important;
+  margin-top: 20px;
+  padding: 0px !important;
+}
+
+.matCardStyle {
+  display: flex;
+  margin: 0px !important;
+}
+
+.matCardImageStyle {
+  border-radius: 50%;
+}
+
+.matHeaderStyle {
+  margin-top: 0px !important;
+  padding-top: 0px !important;
+}
+
+.matCardTitle {
+  color: $text1 !important;
+  font-size: 1px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  line-height: normal;
+}
+
+.matCardSubtitle {
+  font-size: 12px !important;
+  color: $text3 !important;
+}
+
+//Projects OVERVIEW
+/* Extra small devices (phones) */
+@media only screen and (max-width: 575.98px) {
+  .project-management-project-details {
+    height: 100%;
+  }
+
+  .project-overview-project-details {
+    height: 100%;
+  }
+
+  .project-goal-project-details {
+    height: 100%;
+  }
+
+  .project-timeline-project-details {
+    height: 100%;
+  }
+
+  .your-element-class {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Small devices (tablets) */
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .project-management-project-details {
+    height: 100%;
+  }
+
+  .project-overview-project-details {
+    height: 100%;
+  }
+
+  .project-goal-project-details {
+    height: 100%;
+  }
+
+  .project-timeline-project-details {
+    height: 100%;
+  }
+
+  .your-element-class {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Medium devices (laptops) */
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .project-management-project-details {
+    height: 100%;
+  }
+
+  .project-overview-project-details {
+    height: 100%;
+  }
+
+  .project-goal-project-details {
+    height: 100%;
+  }
+
+  .project-timeline-project-details {
+    height: 100%;
+  }
+
+  .your-element-class {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Large devices (desktops) */
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .project-management-project-details {
+    height: 100%;
+  }
+
+  .project-overview-project-details {
+    height: 100%;
+  }
+
+  .project-goal-project-details {
+    height: 100%;
+  }
+
+  .project-timeline-project-details {
+    height: 100%;
+  }
+
+  .your-element-class {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Extra large devices (large desktops) */
+@media only screen and (min-width: 1200px) {
+  .project-management-project-details {
+    height: 100%;
+  }
+
+  .project-overview-project-details {
+    height: 100%;
+  }
+
+  .project-goal-project-details {
+    height: 100%;
+  }
+
+  .project-timeline-project-details {
+    height: 100%;
+  }
+
+  .your-element-class {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+// grids-items
+.project-management-project-details {
+  height: 20rem;
+}
+
+.project-overview-project-details {
+  height: 20rem !important;
+}
+
+.project-goal-project-details {
+  height: 11rem !important;
+}
+
+.project-timeline-project-details {
+  height: 40rem;
+}
+
+// project goal image
+
+.project-goal-image {
+  background-image: url('../src/assets/Images/overviewIcons/Projectgoal.png');
+  background-size: cover;
+}
+
+//   -----project management-----------
+
+
+.example-header-image {
+  // background-image: url('../assets/ManagmentLogo.png');
+  background-size: cover;
+}
+
+.material-icons.icon-right {
+  margin-left: auto;
+  /* This will move the icon to the right */
+}
+
+.project-lead-img {
+  // background-image: url('../assets/Managerpic.png');
+  background-size: cover;
+  width: 2.1875rem;
+  height: 2.1875rem;
+}
+
+.project-description {
+  background-color: #fbfbfb;
+  border: 0.0625rem solid #ededed;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.project-durition {
+  padding-top: 0.625rem;
+  display: flex;
+  gap: 0.625rem;
+}
+
+.project-health {
+  width: 11.5625rem;
+  padding-left: 0.625rem;
+  height: 4.525rem;
+  flex-shrink: 0;
+  border-radius: 0.25rem;
+  border: 0.0625rem dashed #ddd;
+  background: #fbfbfb;
+  margin-bottom: 10px;
+}
+
+.date-color-end {
+  color: $negative;
+  font-size: 0.875rem;
+  display: inline;
+}
+
+.date-color-start {
+  color: $text1;
+  display: inline;
+  font-size: 0.875rem;
+}
+
+.number-size {
+  font-size: 14px;
+
+}
+
+.project-card {
+  width: 11.5625rem;
+  padding-left: 0.625rem;
+  height: 4.525rem;
+  flex-shrink: 0;
+  border-radius: 0.25rem;
+  border: 0.0625rem dashed #ddd;
+  background: #fbfbfb;
+  margin-bottom: 5px;
+}
+
+.small-image {
+  width: 1.75rem;
+  height: 1.75rem;
+  float: right;
+}
+
+.manager-lead {
+  height: 3.75rem;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+.angle-maya-font {
+  font-size: larger;
+}
+
+//  Progress Bar
+.progressbar-with-complete-value {
+
+  --mdc-linear-progress-active-indicator-color: #09A57E;
+
+}
+
+.progressbar-with-incomplete-value {
+
+  --mdc-linear-progress-active-indicator-color: #F6986B;
+}
+
+
+.avatar-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.avatar-container {
+
+  margin-right: -1.25rem;
+}
+
+.round-image {
+  border-radius: 50%;
+}
+
+.small-avatar {
+  width: 2.1875rem;
+  height: 2.1875rem;
+  margin-top: 1.125rem;
+  margin-left: 0.3125rem;
+
+}
+
+.avatar-count {
+
+  font-weight: normal;
+  margin-left: 1.875rem;
+  margin-top: 1.25rem;
+}
+
+
+// project timeline card grid component
+.list-item-container {
+  margin-bottom: 3px;
+  margin-bottom: 3px;
+  padding-bottom: 10px;
+}
+
+.task-overview-start {
+  height: 26.5625rem;
+  padding: 0.625rem;
+  margin-top: 1.875rem;
+  padding-top: 4.375rem;
+  margin-bottom: 4.375rem;
+  background-size: cover;
+  border: 1px solid rgb(224, 221, 221);
+}
+
+.task-bar {
+  margin-bottom: -1.1875rem;
+}
+
+.horizontalDottedLine {
+  overflow-x: hidden;
+}
+
+.task-img {
+  float: left;
+  padding-top: 1.875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.375rem;
+  height: 4.375rem;
+  background: #F2EEFB;
+  border-radius: 0.625rem;
+}
+
+.innerImage {
+  margin-bottom: 1.875rem;
+}
+
+.middle-content {
+  float: left;
+  padding-left: 0.625rem;
+  padding-top: 0.625rem;
+}
+
+.right-content {
+  float: right;
+  padding-right: 0.625rem;
+  padding-top: 3.125rem;
+}
+
+.completed-tasks {
+  color: $negative;
+}
+
+.inprogress-task {
+  color: $positive;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.margin-right {
+  margin-right: 0.625rem;
+  font-weight: $semibold;
+  font-size: large;
+}
+
+// project-goal
+.project-goal-title {
+  font-weight: $semibold !important;
+  font-size: large !important;
+}
+
+
+
+// overview 
+.color-inherit {
+  color: inherit;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.edit-button {
+  background-color: #E3F4FF !important;
+}
+
+.delete-button {
+  background-color: #FFE3E3 !important;
+}
+
+
+#myDropdown {
+  float: right;
+}
+
+
+
+
+/* CSS Declaration */
+.your-element-class {
+  width: 95.3125rem;
+  height: 4.5rem;
+}
+
+
+
+//MEDIA QUERIES
+@media screen and (max-width: 576px) {
+
+  .login-input-field,
+  .login-page-checkbox,
+  .account-check-container,
+  .horizontal-text-decorator {
+    width: 100%;
+  }
+
+  .box-shadow-right-side {
+    height: 100%;
+  }
+  .add-document-button,
+    .filter-container{
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+
+  .login-input-field,
+  .login-page-checkbox,
+  .account-check-container,
+  .horizontal-text-decorator {
+    width: 100%;
+  }
+
+  .login-page-padding-container {
+    padding: 1rem 3rem;
+  }
+
+  .box-shadow-right-side {
+    height: 100%;
+  }
+  .add-document-button,
+    .filter-container{
+        display: none !important;
+      }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+  .login-input-field,
+  .login-page-checkbox,
+  .account-check-container,
+  .horizontal-text-decorator {
+    width: 100%;
+  }
+
+  .box-shadow-right-side {
+    height: 100%;
+  }
+
+  .login-page-padding-container {
+    padding: 2rem 5rem;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+
+  .login-input-field,
+  .login-page-checkbox,
+  .account-check-container,
+  .horizontal-text-decorator {
+    width: 100%;
+  }
+
+  .login-page-padding-container {
+    padding: 2rem 6rem;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+
+  .login-input-field,
+  .login-page-checkbox,
+  .account-check-container,
+  .horizontal-text-decorator {
+    width: 100%;
+  }
+
+  .login-page-padding-container {
+    padding: 3.5rem 9rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+
+  .login-input-field,
+  .login-page-checkbox,
+  .account-check-container,
+  .horizontal-text-decorator {
+    width: 100%;
+  }
+
+  .login-page-padding-container {
+    padding: 3.5rem 9rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .projectHeaderButtons {
+    display: block !important;
+  }
+
+  .toggleProjectHeaderButtons {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projectHeaderButtons {
+    display: none !important;
+  }
+
+  .toggleProjectHeaderButtons {
+    display: block !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+//--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+//------------------------------------------------------------------------------------------------------------------------
+
+
+/* You can add global styles for the whole container and the search navbar*/
+
+
+.rectangle-frame {
+  // position: absolute;
+  border-radius: 0.1875rem;
+  border: 1px solid #EDEDED;
+  // overflow: scroll;
+  overflow-x: hidden;
+  // background-color: #ffffff;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
+  max-height: 85vh;
+  background-color: #f8f9fb;
+}
+
+
+//---------------------------------inputbox/filter and shortby properties-----------------------
+
+.filter {
+  display: flex;
+  background-color: #FFFFFF;
+  width: 6.6875rem;
+  height: 3rem;
+  border-radius: 4px;
+  border: 1px solid #E0E0E0;
+}
+
+.filtertext {
+  width: 2.4375rem;
+  height: 1.625rem;
+  font-family: Source Sans Pro;
+  font-weight: 400;
+  font-size: $text18;
+  line-height: normal;
+  color: $text2;
+  padding-left: 0.9375rem;
+  padding-top: 0.9375rem;
+}
+
+.Sortbytext {
+
+
+  font-weight: 400;
+  font-size: $text16;
+  line-height: normal;
+  color: #444444;
+
+
+
+
+}
+
+
+//cardimage
+.custom-image {
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+}
+
+//headericons
+.headericonsfilter {
+  width: 18px;
+  height: 18px;
+  margin-left: 1rem;
+}
+
+.headericons {
+
+  color: #666666;
+
+
+}
+
+//inside search navbar
+
+.insidesearchnavbar {
+  background-color: white;
+  gap: $text20;
+}
+
+//keyboard arrow down icon
+.keyboard_arrow_down {
+  align-items: center;
+}
+
+//short by properties
+.shortby {
+  display: flex;
+  background-color: #FFFFFF;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid #E0E0E0;
+  margin-right: $text20;
+  width: 153px;
+  height: 48px;
+  gap: 10px;
+  justify-content: center;
+}
+
+//input search box
+
+.inputbox {
+  width: 21.5rem;
+  height: $headline48;
+  border: 1px solid #E0E0E0;
+  border-radius: 4px;
+  margin-left: 1.875rem;
+  font-size: $text20;
+  text-align: justify;
+  text-indent: 1.875rem;
+  outline: none;
+
+}
+
+.inputbox::placeholder {
+  text-indent: 2rem;
+}
+
+.inputbox-searchicon {
+  width: $text18;
+  height: $text18;
+  flex-shrink: 0;
+  stroke-width: 0.5px;
+  position: absolute;
+  right: 320px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.searchnavbar {
+  background-color: #FFFFFF;
+  display: flex;
+  padding-top: $text20;
+  background: cover !important;
+}
+
+.insidesearchnavbar {
+  display: flex;
+  background-color: white;
+  gap: $text20;
+  margin-left: auto;
+}
+
+
+
+
+
+
+//content inthe input box
+.fullsearchbox {
+  position: relative;
+
+  margin-left: 0;
+
+  // display: flex;
+}
+
+// Your existing styles
+
+// ...........................................................
+
+
+// Add media query for responsiveness for the searchnavbar
+
+@media screen and (max-width: 768px) {
+
+  .searchnavbar {
+    flex-direction: column; // Stack items vertically on small screens
+    padding-top: $text16; // Adjust top padding for spacing
+
+    .insidesearchnavbar {
+      margin-left: 0; // Reset margin on small screens
+    }
+
+    .inputbox {
+      width: 100%; // Take full width on small screens
+      margin: 0 1rem; // Reset margin
+    }
+
+    .inputbox-searchicon {
+      right: 16px; // Adjust the position on small screens
+    }
+
+    .filter,
+    .shortby {
+      width: 100%; // Take full width on small screens
+      margin-bottom: $text16; // Add bottom margin for spacing
+      margin-top: 1rem;
+    }
+  }
+
+  .project-tabgroup {
+    // margin: 2rem 0rem;
+    background-color: #ffffff !important;
+    min-height: 90vh;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .rectangle-frame {
+    width: 100%;
+    height: 100%;
+
+  }
+
+  .fullsearchbox {
+    margin: 0px 30px 0px 0px;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width:768px) {
+  .rectangle-frame {
+    width: 100%;
+    height: 100%;
+  }
+
+  .fullsearchbox {
+    margin: 0px 30px 0px 0px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width:992px) {
+  .rectangle-frame {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width:1200px) {
+  .rectangle-frame {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width:1400px) {
+  .rectangle-frame {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .rectangle-frame {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+//........................................................................
+
+
+
+
+
+
+
+
+.allCarddesign {
+  justify-content: center;
+  margin-left: 0;
+  overflow-y: auto;
+  height: calc(100vh - 310px);
+
+
+  /* Adjust the height based on your layout */
+}
+
+.card-container {
+  // display: flex;
+  // flex-wrap: wrap;
+  border-radius: 4px;
+  border: 1px solid #EFEFEF;
+  background: #FFF;
+  box-shadow: 0px 2px 8px 0px rgba(39, 41, 55, 0.08);
+  justify-content: center;
+  margin-top: 2rem;
+
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.newCard {
+  width: 300px;
+  height: 400px;
+  border: 2px solid red;
+}
+
+/* Style for each card */
+
+
+.card-title {
+  width: 231px;
+  height: 5px;
+  flex-shrink: 0;
+}
+
+.blurred-text {
+  color: #666;
+  font-weight: 400;
+}
+
+//description of the project
+.descriptioOfTheProject {
+  background-color: #F9F9F9;
+  width: 350px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+/* Style for mat-card */
+mat-card {
+  width: 100%;
+}
+
+/* Style for mat-card-content within mat-card-header */
+
+
+/* Style for additional info section */
+.additional-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-left: 20px;
+  padding-top: 10px;
+}
+
+/* Style for progress status section */
+.progress-status,
+.progress-bar-container {
+  margin-top: 10px;
+
+  /* Adjust as needed for spacing */
+}
+
+.manager-card {
+  border: 1px dashed #DDD;
+  background-color: #FBFBFB;
+}
+
+.mat-card-subtitle {
+  font-style: unset;
+}
+
+.mat-card-title {
+  font-style: unset;
+    font-size: small;
+    display: flex; /* Use flexbox to make children elements appear in a row */
+    align-items: center; /* Align items vertically in the center */
+}
+
+.date-range {
+  color: crimson;
+  margin-left: 8px; /* Add some margin between start date and end date */
+}
+
+.projecthealth {
+  font-style: unset;
+  font-size: small;
+  padding-left: 10PX;
+  padding-top: 5PX;
+}
+
+.progress-value {
+  font-size: medium;
+  padding-left: 10PX;
+}
+
+.progress-spinner {
+  margin-top: 30px;
+}
+
+.spinner-with-completevalue {
+  --mdc-circular-progress-active-indicator-color: #09A57E;
+
+}
+
+.spinner-with-uncompletevalue {
+  --mdc-circular-progress-active-indicator-color: #EE9E40;
+
+}
+
+.health-card {
+  border: 1px dashed #DDD;
+  background-color: #FBFBFB;
+}
+
+.progressbar-with-complete-value {
+
+  --mdc-linear-progress-active-indicator-color: #09A57E;
+  border-radius: 1rem;
+
+}
+
+.progressbar-with-incomplete-value {
+
+  --mdc-linear-progress-active-indicator-color: #F6986B;
+  border-radius: 1rem;
+
+}
+
+.mypro {
+
+  background-size: cover;
+  max-width: fit-content;
+  padding-left: 35px;
+
+
+
+
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-container {
+
+  margin-right: -15px;
+}
+
+.round-image {
+  border-radius: 50%;
+}
+
+.small-avatar {
+  width: 35px;
+  height: 35px;
+  margin-top: 18px;
+  margin-left: 5px;
+
+}
+
+.avatar-count {
+
+  font-weight: normal;
+  margin-left: 20px;
+  margin-top: 25px;
+}
+
+.responsive-card {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+
+}
+
+@media only screen and (max-width: 600px) {
+  .responsive-card {
+
+    flex-wrap: wrap;
+
+  }
+
+  .small-avatar {
+    width: 20px;
+    height: 20px;
+    margin-top: 18px;
+
+
+  }
+
+  .avatar {
+    flex-direction: row;
+    /* Stack avatars vertically on small screens */
+    align-items: flex-start;
+
+
+
+  }
+
+  .avatar-container {
+
+    margin-right: -15px;
+    // margin-right: 0; /* Remove margin between avatars on small screens */
+    margin-bottom: 0.5rem;
+
+  }
+
+  .avatar-count {
+
+    font-weight: normal;
+    margin-left: 20px;
+    margin-top: 25px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .allCarddesign {
+    max-width: 100%;
+    // margin: 0 2rem;
+    height: calc(100vh - 150px);
+  }
+
+  .descriptioOfTheProject {
+    max-width: 100%;
+  }
+
+  .card-container {
+    margin: 0 10px;
+  }
+
+  .responsive-card {
+    width: 100%;
+    flex-wrap: wrap;
+
+
+  }
+
+}
+
+
+
+
+
+
+
+//----------------------projectviewformat---------------------
+
+
+.secondnavbar {
+  background-color: #ffffff;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.mat-icon {
+  color: #333;
+}
+
+.navbar-brand {
+  display: inline-block;
+  color: #333;
+}
+
+
+
+
+
+
+button.primary-button {
+  background-color: #3f51b5;
+  color: #ffffff;
+  width: 158px;
+  height: 48px;
+  top: 84px;
+  left: 1736px;
+  padding: 11px 20px;
+  border-radius: 4px;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+button.primary-button:hover {
+  background-color: #3949ab;
+}
+
+button.grid-view-button {
+  width: 172px;
+  height: 48px;
+  top: 84px;
+  left: 1548px;
+  border-radius: 4px;
+  border: 1px solid #535050;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+button.grid-view-button {
+  background-color: white;
+}
+
+
+
+
+
+.custom-grid-button mat-icon {}
+
+.custom-grid-button span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+
+
+////////-------------------------key frame for view format----------------------------------
+
+
+
+@media only screen and (min-width: 460px) {
+  .secondnavbar {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .secondnavbar-button {
+    display: flex;
+  }
+
+  .mat-icon {
+    color: #333;
+  }
+
+  .navbar-brand {
+    display: inline-block;
+    color: #333;
+  }
+
+
+
+
+
+
+  button.primary-button {
+    background-color: #3f51b5;
+    color: #ffffff;
+    width: 158px;
+    height: 48px;
+    top: 84px;
+    left: 1736px;
+    padding: 11px 20px;
+    border-radius: 4px;
+    gap: 8px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  button.primary-button:hover {
+    background-color: #3949ab;
+  }
+
+  button.grid-view-button {
+    width: 172px;
+    height: 48px;
+    top: 84px;
+    left: 1548px;
+    border-radius: 4px;
+    border: 1px solid #535050;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  button.grid-view-button {
+    background-color: white;
+  }
+
+
+
+  .custom-grid-button {
+    width: 172px;
+    height: 48px;
+    border-radius: 4px;
+    border: 1px solid #000000;
+    background-color: white;
+    font-size: medium;
+
+  }
+
+  .custom-grid-button {
+    display: flex;
+    align-items: center;
+  }
+
+  .custom-grid-button mat-icon {
+    margin-right: 4px;
+  }
+
+  .custom-grid-button span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .primary-button-small {
+    display: none;
+  }
+
+  .view-format-button-small-screen {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .secondnavbar {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0 1rem;
+
+  }
+
+  .secondnavbar-button {
+    display: flex;
+
+  }
+
+  .mat-icon {
+    color: #333;
+  }
+
+
+
+  .primary-button-small {
+    width: 0px;
+    margin-top: 10px;
+
+  }
+
+  .navbar-brand {
+    display: inline-block;
+    color: #333;
+    padding-top: 0.5rem;
+  }
+
+
+  button.primary-button {
+    display: none;
+  }
+
+
+
+  .custom-grid-button {
+    display: none !important;
+
+
+  }
+
+  .custom-list-button {
+    display: none !important;
+  }
+
+  .custom-list-button-smallscreen {
+    width: fit-content;
+    height: fit-content;
+  }
+
+  .view-format-button-small-screen {
+    width: 0;
+  }
+}
+
+
+
+//------------------------------add css for the list view --------------------------------------
+
+/* project-table.component.css */
+.table-container {
+  overflow-x: auto !important;
+
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 0.0625rem solid #ddd;
+  /* 1px / 16px = 0.0625rem */
+  // margin-right: 1rem;
+
+}
+
+th {
+  background-color: #f6f6f6;
+  /* Set the background color for the header */
+  border-bottom: 0.0625rem solid #ddd;
+  padding: 0.75rem;
+  /* 12px / 16px = 0.75rem */
+}
+
+td {
+  border-bottom: 0.0625rem solid #ddd;
+  padding: 0.75rem;
+}
+
+th:last-child,
+td:last-child {
+  border-right: none;
+}
+
+
+/* Add additional styles as needed */
+
+/* Responsive Styles */
+@media only screen and (max-width: 600px) {
+
+  th,
+  td {
+    padding: 0.5rem;
+    /* Adjust padding for smaller screens */
+
+  }
+}
+
+
+

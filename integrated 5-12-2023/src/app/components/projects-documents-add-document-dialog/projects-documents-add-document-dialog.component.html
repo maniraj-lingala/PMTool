@@ -1,0 +1,54 @@
+<div class="container">
+	<!-- dialog headder -->
+	<div class="AddMemberHeader">
+		<h2 mat-dialog-title>Add Document</h2>
+		<button mat-button class="close-icon" [mat-dialog-close]="true">
+			<mat-icon>close</mat-icon>
+		</button>
+	</div>
+	<div class="container">
+		<!-- document drag and drop or document upload -->
+		<div class="dropzone" fileDragDrop (filesChangeEmiter)="onFileChange($event)">
+			<div class="dropzone-text">
+				<div class="dropzone-centerd">
+					<input type="file" class="dropzone-input" name="file" id="file" (change)="onFileChangeOver($event)"
+						multiple>
+					<label for="file">
+						<img src="../../../assets/Images/icons/uploadIcon.png" alt="upload">
+						<br>
+						<div class="mt-3">
+							<span class="document-chouse-text">Choose File </span>
+							<span class="document-toupload-text">to upload or</span>
+							<span class="document-dragndrop-text"> Drag and Drop!</span> <br>
+							<span class="document-maximum-file-text">Maximum File Size 50 MB</span>
+						</div>
+					</label>
+				</div>
+			</div>
+		</div>
+		<!-- uploaded documents to display -->
+		<div class="row">
+			<p class="add-document-text mt-3">Attached Files</p>
+			<mat-card class="dropzone-document-file mt-3" *ngFor="let f of files">
+				<div class=" fileItemText d-flex align-items-center my-auto">
+					<div class="w-100 text-start d-flex align-items-center">
+						<img src={{f.image}} alt="pdf" width="30px" height="30px" class="me-2">
+						<span class="file-name">{{f.file.name}}</span>
+						<span class="example-spacer"></span>
+						<img src="../../../assets/Images/icons/action-horizontal.png" alt="ds">
+					</div>
+				</div>
+			</mat-card>
+		</div>
+	</div>
+	<!-- access for the document to employes -->
+	<div class="container mt-3">
+		<span class="add-document-text">Access To</span>
+		<select class="document-Access mt-1">
+			<option value="employee1">employee1</option>
+			<option value="employee2">employee2</option>
+			<option value="employee3">employee3</option>
+			<option value="employee4">employee4</option>
+		</select>
+	</div>
+</div>

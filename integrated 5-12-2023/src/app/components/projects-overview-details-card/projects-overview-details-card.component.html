@@ -1,0 +1,97 @@
+<div class="row">
+    <mat-card class="project-management-tool-start" *ngFor="let project of myprojects">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image">
+          <img [src]="project.imageSrc" alt="Project Image">
+        </div>
+        <mat-card-title>{{ project.title }}</mat-card-title>
+        <mat-card-subtitle>{{ project.subtitle }}</mat-card-subtitle>
+        <!-- If you have a static icon, you can still use it -->
+        <span class="material-icons icon-right">more_horiz</span>
+      </mat-card-header>
+  
+      <!-- Project description -->
+      <div class="p-3">
+        <mat-card-content class="project-description">
+          {{ project.projectDescription }}
+        </mat-card-content>
+      </div>
+  
+      <!-- Project information in the same row -->
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="project-health">
+            <div class="demo-button-container">
+              <mat-card-subtitle>PROJECT DURATION</mat-card-subtitle>
+              <mat-card-title class="date-size">
+                <span class="date-color-start">{{ project.startdate }}</span>
+                <span class="date-color-end">{{ project.enddate }}</span>
+              </mat-card-title>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Project health information -->
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="project-card">
+            <div class="demo-button-container">
+              <mat-card-subtitle>PROJECT HEALTH</mat-card-subtitle>
+              <mat-card-title class="number-size">
+                <span class="custom-flex">
+                  <span class="number-size">{{ project.projectHealth.percentage }}%</span>
+                  <img src="{{ project.projectHealth.imagePath }}" alt="" class="small-image" />
+                </span>
+              </mat-card-title>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Manager/Lead name and role -->
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <mat-card-header class="manager-lead">
+            <div mat-card-avatar class="project-lead-img"
+              [style.background-image]="'url(' + project.projectLead.imageSrc + ')'"></div>
+            <mat-card-title class="angle-maya-font">{{ project.projectLead.name }}</mat-card-title>
+            <mat-card-subtitle>{{ project.projectLead.role }}</mat-card-subtitle>
+          </mat-card-header>
+        </div>
+  
+        <!-- Avatar images -->
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="avatar-row">
+            <div class="avatar-container" *ngFor="let avatar of avatars.slice(0, 5)">
+              <img class="round-image small-avatar" [src]="avatar.image" />
+            </div>
+            <div class="avatar-count">
+              +{{ avatars.length - 2 }}
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Progress bar for project completion -->
+      <div class="progress-status">
+        <div *ngIf="project.progressValue<100 ;else elseblock">
+          <p style="margin-left: 70%; "> <span style="color: orangered;">In Progress
+            </span>{{project.progressValue}}% </p>
+        </div>
+        <ng-template #elseblock>
+          <p style="margin-left: 70%;">
+            <span style="color: green;">Completed </span>{{ project.progressValue }}%
+          </p>
+        </ng-template>
+      </div>
+  
+  
+      <div class="progress-bar-container">
+        <div *ngIf="project.progressValue > 99; else elseBlocky">
+          <mat-progress-bar class="progressbar-with-complete-value" [value]="project.progressValue" strokeWidth="5"
+            diameter="30"></mat-progress-bar>
+        </div>
+        <ng-template #elseBlocky>
+          <mat-progress-bar class="progressbar-with-incomplete-value" [value]="project.progressValue" strokeWidth="5"
+            diameter="30"></mat-progress-bar>
+        </ng-template>
+      </div>
+    </mat-card>
+  </div>

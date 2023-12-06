@@ -1,0 +1,101 @@
+<!-- Team Member Container -->
+<div class="TeamMemberCardContainer">
+  <div class="teamSearchContainer">
+    <app-input-search-field></app-input-search-field>
+    <div>
+      <button mat-raised-button class="button">
+        <span class="searchContainerStyle">Sort By</span>&nbsp;&nbsp;&nbsp;<img src="/assets/Images/icons/Vector.png"
+          alt="VectorIcon" />
+      </button>
+      <app-button-filter></app-button-filter>
+      <button mat-raised-button class="button" (click)="openDialog()" class="addMemberButton">
+        <span>
+          <img src="/assets/Images/icons/addIcon.png" alt="addIcon" />
+          Add Member
+        </span>
+      </button>
+    </div>
+  </div>
+  <div class="CardContainer">
+    <mat-card *ngFor="let item of memberslist" style="margin: 10px" class="teamMemberCard">
+      <!-- Team Member Details Container -->
+      <div class="TeamMemberDetails">
+        <div>
+          <img src="{{ item.image }}" alt="{{ item.name }}" class="TeamMemberImage" />
+        </div>
+        <div>
+          <mat-card-header class="memberProfileDetails">
+            <mat-card-title class="memberName">{{ item.name }}</mat-card-title>
+            <mat-card-subtitle>{{ item.designation }}</mat-card-subtitle>
+            <mat-card-subtitle>
+              <h4 class="memberName">
+                {{ item.empId }}
+              </h4>
+            </mat-card-subtitle>
+          </mat-card-header>
+        </div>
+        <div style="margin-top: 20px">...</div>
+      </div>
+      <div style="display: flex;justify-content:space-between;align-items: center;">
+        <mat-card-content>
+          <img src="../../assets/Images/icons/callSign.png" alt="callSign" class="CardIcons" />&nbsp;&nbsp;
+          <img src="/assets/Images/icons/chatSign.png" alt="chatSign" class="CardIcons" />&nbsp;&nbsp;
+          <img src="/assets/Images/icons/emailSign.png" alt="emailSign" class="CardIcons" />
+        </mat-card-content>
+        <mat-card-subtitle class="TeamMemberAvailability" style="color: #0f0f0f">
+          <div *ngIf="item.status === 'Available'; then thenBlock; else elseBlock"></div>
+          <ng-template #thenBlock>
+            <img src="/assets/Images/icons/availableSign.png" alt="availableSign" />
+          </ng-template>
+          <ng-template #elseBlock>
+            <mat-icon>cancel</mat-icon>
+          </ng-template>
+          &nbsp;{{ item.status }}
+        </mat-card-subtitle>
+      </div>
+      <div class="d-flex flex-column" style="padding: 10px">
+        <h1 class="TaskScoreItem">TASKS</h1>
+        <mat-table [dataSource]="dataSource">
+          <ng-container matColumnDef="Task_Assigned">
+            <mat-header-cell *matHeaderCellDef class="labelText">
+              Assigned
+            </mat-header-cell>
+            <mat-cell *matCellDef>
+              {{ item.assigned }}
+            </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="Task_Pending">
+            <mat-header-cell *matHeaderCellDef class="labelText">
+              Pending
+            </mat-header-cell>
+            <mat-cell *matCellDef>
+              {{ item.pending }}
+            </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="Task_Completed">
+            <mat-header-cell *matHeaderCellDef class="labelText">
+              Completed
+            </mat-header-cell>
+            <mat-cell *matCellDef>
+              {{ item.completed }}
+            </mat-cell>
+          </ng-container>
+
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+        </mat-table>
+      </div>
+      <!-- Progress-bar Container-->
+      <mat-progress-bar mode="determinate" value="{{ (item.completed * 100) / item.assigned }}" color="warn"
+        class="mat-progress-bar-background"></mat-progress-bar>
+      <!-- Team Member Tasks Status Container -->
+      <div class="DisplayScore">
+        <p class="TaskScoreItem">
+          Task Score:<span class="memberName">{{ (item.completed * 100) / item.assigned }}</span>
+        </p>
+        <p class="assignButton" (click)="openProfileDialog()"> View Profile </p>
+      </div>
+    </mat-card>
+  </div>
+</div>

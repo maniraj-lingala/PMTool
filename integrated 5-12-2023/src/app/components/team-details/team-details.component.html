@@ -1,0 +1,66 @@
+<div class="ProjectsContainer">
+    <div class="ProjectsSubContainer">
+        <div style="width: 30%">
+            <mat-card-header class="teamHeadercard">
+                <mat-card-title class="teamCaption">PROJECT MANAGEMENT TEAM</mat-card-title>
+                <mat-card-subtitle class="totalMembers" *ngIf="viewLess==true">28 Members</mat-card-subtitle>
+                <mat-card-subtitle class="teamDescription" *ngIf="viewLess==true">Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit.
+                    Perspiciatis,
+                    quaerat.</mat-card-subtitle>
+            </mat-card-header>
+        </div>
+        <div style="width: 30%">
+            <mat-card-header class="teamHeadercard" *ngIf="viewLess==true">
+                <mat-card-title class="teamCaption">REFERENCE LINKS</mat-card-title>
+                <mat-card-subtitle>
+                    <a href="#" class="teamDescription linkText"><img src="assets/Images/icons/linkIcon.png"
+                            alt="examplelink" class="link">&nbsp;www.examplelink.com/test</a><br />
+                    <a href="#" class="teamDescription linkText"><img src="assets/Images/icons/linkIcon.png"
+                            alt="pmtoolwebsit" class="link">&nbsp;www.pmtoolwebsite.net/dummy</a>
+                </mat-card-subtitle>
+            </mat-card-header>
+        </div>
+        <div style="width: 30%">
+            <mat-card-header class="teamHeadercard" *ngIf="viewLess==true">
+                <mat-card-title class="teamCaption">TEAM CREATOR</mat-card-title>
+                <mat-card-subtitle class="teamDescription" style="font-size: 16px;">Created On: 24 June 2021
+                </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card *ngIf="viewLess==true" class="matCardContainer">
+                <div class="matCardStyle">
+                    <img src="/assets/Images/profile_images/userprofile.png" alt="manager" class="matCardImageStyle" />
+                    <mat-card-header class="matHeaderStyle">
+                        <mat-card-title class="matCardTitle">Christian Bale</mat-card-title>
+                        <mat-card-subtitle class="matCardTitle matCardSubtitle">Project Manager</mat-card-subtitle>
+                    </mat-card-header>
+                </div>
+            </mat-card>
+        </div>
+        <div style="width: 10%">
+            <mat-card-header class="teamHeadercard" (click)="toggleComponent()" *ngIf="viewLess==true">
+                <mat-card-title><a class="teamDescription teamViewButton">View Less</a></mat-card-title>
+            </mat-card-header>
+            <mat-card-header class="teamHeadercard" (click)="toggleComponent()" *ngIf="viewLess==false">
+                <mat-card-title><a class="teamDescription teamViewButton">View More</a></mat-card-title>
+            </mat-card-header>
+        </div>
+    </div>
+    <!-- Projects Team-Footer-Container -->
+    <div>
+        <div style="padding-top: 15px">
+            <mat-tab-group mat-stretch-tabs="true" mat-align-tabs="start" class="teamDescription">
+                <mat-tab label="All">
+                    <!-- <app-membercard></app-membercard> -->
+                </mat-tab>
+                <mat-tab label="Design Team"></mat-tab>
+                <mat-tab label="Front-End Team"></mat-tab>
+                <mat-tab label="Back-End Team"></mat-tab>
+                <mat-tab label="Business Analysts"></mat-tab>
+                <mat-tab label="PMO Team"></mat-tab>
+                <mat-tab label="R&D Team"></mat-tab>
+                <mat-tab label="IT Support"></mat-tab>
+            </mat-tab-group>
+        </div>
+    </div>
+</div>

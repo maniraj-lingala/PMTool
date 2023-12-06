@@ -1,0 +1,10 @@
+<button *ngIf="!isLoading" type="button" class="social-media-button login-input-field facebook-button mt-4"
+    (click)="onSubmitClick($event)" >Sign Up
+</button>
+
+<button *ngIf="isLoading" type="button" class="facebook-button login-input-field social-media-button mt-4">
+    <span>
+        <img src="../../assets/Images/icons/loaderSpinner.png" alt="Loader_Image">
+    </span>
+    Checking For Email..
+</button>

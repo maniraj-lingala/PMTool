@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6 col-md-12 box-shadow-right-side login-page-padding-container">
+      <!-- Pro Manage logo -->
+      <img src="../../assets/Images/logos/logo.png" alt="Loginpage_xLogo">
+      <div class="container mt-3 pt-5">
+        <div class="row ">
+          <p class="stepper-tab1 me-2"></p>
+          <p class="stepper-tab1 me-2"></p>
+          <p class="stepper-tab1 me-2"></p>
+          <p class="stepper-tab1"></p>
+        </div>
+      </div>
+
+      <div class="row my-2">
+        <p class="heading">What would you like to name your workspace?</p>
+      </div>
+      <div class="row my-3">
+        <mat-form-field class="input" appearance="outline">
+          <mat-label>Workspace Name</mat-label>
+          <input type="text" title="email" matInput formControlName="email">
+        </mat-form-field>
+      </div>
+      <div>
+        <button class="stepper-back me-3" routerLink="/appPurposeType"> <img
+            src="../../../assets/Images/icons/leftArrow.png" alt="" class="me-1">Back</button>
+        <button class="stepper-next border-0 justify-content-center" routerLink="/loginPage"
+          (click)="onSignUpClick()">sign up </button>
+      </div>
+    </div>
+  </div>
+</div>

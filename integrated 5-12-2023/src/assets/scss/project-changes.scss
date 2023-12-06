@@ -1,0 +1,539 @@
+// From changes table
+.table-header-container {
+    display: flex;
+    align-items: center;
+}
+
+.border {
+    border: 1px solid #D8D8D8;
+    border-radius: 4px;
+}
+
+.search-icon-bar-container, 
+.filter-container, .Add-change-button {
+    margin-right: 20px; 
+}
+
+.search-bar {
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 150px;
+}
+
+.filter-container {
+    margin-left: 680px; /* Adjust margin as needed */
+}
+
+// 
+.Add-change-button {
+    display: inline-flex;
+    // padding: 11px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    background: #014EBA !important;
+    color: #FFF !important;
+    font-family: 'Source Sans Pro';
+    font-size: 18px;
+    float: right !important;
+}
+/* You can add global styles to this file, and also import other style files */
+// @import 'src/assets/SCSS/custom.scss';
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.changes-mat-table{
+    width: 100%;
+}
+.changes-table-header {
+    color: $text2;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: $bold;
+    line-height: normal;
+    // width: 1551px;
+    height: 56px;
+    flex-shrink: 0;
+    border-radius: 3px 3px 0px 0px;
+    background: $background !important;
+
+}
+.change-request-width{
+    width: 15%;
+}
+
+.Requestedby-name{
+width: 15%;
+}
+.change-by-width{
+    width: 15%;
+}
+
+//   dialog component for title input
+.input-container {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.custom-box {
+    width: 742px;
+    height: 167px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid #E9E9E9;
+    background: #FFF;
+    display: flex;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    font-size: 14px;
+}
+
+//  Add changes
+.Addchange-header {
+    color: var(--text-color-1, #0F0F0F);
+    font-family: Source Sans Pro;
+    font-size: $text18;
+    font-style: normal;
+    margin-left: 20px !important;
+    font-weight: $bold;
+    line-height: normal;
+}
+
+.changes-changerequestId {
+    color: var(--text-color-1, #0F0F0F);
+    font-family: Source Sans Pro;
+    font-size: $text18;
+    font-style: normal;
+    font-weight: 400;
+    margin-left: 20px !important;
+    line-height: normal;
+}
+
+.changes-IDEM-CR-0002 {
+    color: var(--text-color-1, #0F0F0F);
+    font-family: Source Sans Pro;
+    font-size: $text18;
+    padding: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.change-Project-Manager {
+    color: var(--text-color-1, #0F0F0F);
+    font-family: Source Sans Pro;
+    font-size: $text18;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 60px;
+}
+
+.changes-Haley-Lucas {
+    color: var(--text-color-1, #0F0F0F);
+    font-family: Source Sans Pro;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: $bold;
+    line-height: normal;
+}
+
+.input-container-title {
+    width: 590px;
+    height: 150px !important;
+    flex-shrink: 0;
+    border-radius: 4px;
+    margin-left: 20px !important;
+    border: 1px solid #E9E9E9;
+    background: #FFF;
+    color: #E9E9E9;
+}
+.Addchanges-title {
+    color: var(--text-color-1, #0F0F0F);
+    padding: 10px;
+
+}
+#addchanges-inputfield {
+    margin-left: 20px;
+}
+
+.Add-changes-to {
+    width: 590px !important;
+    height: 70px !important;
+    flex-shrink: 0;
+    border-radius: 4px;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+// dropdown component
+.add-change-input-form-field {
+    border-radius: 4px;
+    background-color: $google;
+    margin-left: 1.5rem;
+}
+
+// mat select custom css
+.mat-mdc-form-field-infix{
+    width: 240px !important;
+    height: 40px !important;
+}
+//calender component
+.calender-component,.Approved-Date-component,
+.Changes-Completion-Date-Component
+ {
+    width: 275px;
+    height: 78px;
+    flex-shrink: 0;
+}
+
+
+//Approved date component
+// Impact level component
+// status Level component
+.Status-Level-Component{
+    width: 310px;
+}
+// change by component
+// change completion component
+
+
+
+// pricing & comment component
+.pricing-budget {
+    width: 590px;
+    height: 100px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid #D8D8D8;
+    background: #FFF;
+    margin-left: 20px !important;
+    margin-top: 15px;
+
+}
+
+.changes-addcomment {
+    width: 590px;
+    height: 100px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid #D8D8D8;
+    background: #FFF;
+    margin-left: 20px !important;
+    margin-top: 15px;
+
+}
+
+.cancel-button  { 
+    color: #014EBA !important;
+    font-family: Source Sans Pro;
+    font-size: $text18;
+    font-style: normal;
+    font-weight: $bold;
+    line-height: normal;
+    display: inline-flex;
+    background: #FFF !important;
+    padding: 11px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-left: 350px;
+    margin-bottom: 20px;
+}
+.change-button {
+    display: inline-flex;
+    padding: 11px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    background: #014EBA !important;
+    color: #FFF !important;
+    font-family: 'Source Sans Pro';
+    font-size: 18px;
+    float: right;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+// add changes dialog box
+// 
+// edit and delete buttons
+
+.edit-delete-buttons {
+    display: flex;
+    gap: 10px; 
+    margin-left: 10px; 
+  }
+  
+.addchanges-delete {
+    width: 110px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid #FFE3E3;
+    background: var(--negative-negative-50, #FEEBEB);
+    color: var(--negative-negative-500, #F03838);
+    font-family: Source Sans Pro;
+    font-size: $text18;
+    font-style: normal;
+    font-weight: $bold;
+    line-height: normal;
+    float: right;
+    // margin-top: 20px !important;
+}
+
+.addchanges-edit {
+    width: 93px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid #E3F4FF;
+    background: #F0F9FF;
+    color: var(--secondary-secondary-500, #007ACC);
+    font-family: Source Sans Pro;
+    font-size: $text18;
+    font-style: normal;
+    font-weight: $bold;
+    line-height: normal;
+    float: right;
+    // margin-top: 20px !important;
+}
+
+
+//
+.change-Details,
+.addchanges-IDEM-CR {
+    color: var(--text-color-1, #0F0F0F);
+    font-family: Source Sans Pro;
+    font-size: $text18;
+    font-style: normal;
+    font-weight: $bold;
+    line-height: normal;
+    margin-left: 31px !important;
+    margin-top: 20px !important;
+}
+
+.addchanges-IDEM-CR {
+    width: 149px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid #F2F2F2;
+    background: #F8F8F8;
+}
+
+// 
+.addchanges-authentication {
+    color: var(--text-color-1, #0F0F0F);
+    font-family: Source Sans Pro;
+    font-size: $text18;
+    font-style: normal;
+    font-weight: $bold;
+    line-height: normal;
+    margin-left: 31px !important;
+}
+
+.addchanges-Description {
+    color: var(--text-color-2, #444);
+    font-family: Source Sans Pro;
+    font-size: $text18;
+    font-style: normal;
+    font-weight: $regular;
+    line-height: 34px;
+    margin-left: 31px !important;
+}
+
+.addchanges-reason {
+    color: var(--text-color-2, #444);
+    margin-left: 31px !important;
+}
+
+.addchanges-reason-info {
+    color: var(--text-color-1, #0F0F0F);
+}
+
+.addchanges-reason,
+.addchanges-reason-info {
+    font-family: Source Sans Pro;
+    font-size: $text18;
+    font-style: normal;
+    font-weight: $regular ;
+    line-height: 34px;
+
+}
+
+// 
+.addchanges-change-item,
+.addchanges-changed-to,
+.addchanges-pricing,
+.addchanges-Target-Date,
+.addchanges-Impact-Level,
+.addchanges-Status {
+    color: var(--text-color-2, #444);
+    font-family: Source Sans Pro;
+    font-size: $text18;
+    font-style: normal;
+    font-weight: $regular;
+    line-height: 34px;
+    margin-left: 31px !important;
+}
+
+.addchange-module,
+.addchanges-user-MFA,
+.addchanges-,
+.addchanges-date-year {
+    color: var(--text-color-1, #0F0F0F);
+    font-family: Source Sans Pro;
+    font-size: $text18;
+    font-style: normal;
+    font-weight: $bold;
+    line-height: 34px;
+}
+
+.addchanges-Level {
+    color: var(--negative-negative-500, #F03838);
+    font-family: Source Sans Pro;
+    font-size: $text18;
+    font-style: normal;
+    font-weight: $bold;
+    line-height: 34px;
+}
+
+.addchanges-open-close {
+    display: inline-flex;
+    padding: 4px 14px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    background: #FFF3E5;
+    color: #EE9E40;
+}
+
+// add changes dialog component
+.addchanges-comments {
+    color: var(--text-color-1, #0F0F0F);
+    font-family: Source Sans Pro;
+    font-size: $text18;
+    font-style: normal;
+    font-weight: $bold;
+    line-height: normal;
+}
+
+.addchanges-comment-1,
+.addchanges-comment-2 {
+    color: var(--text-color-1, #0F0F0F);
+    font-family: Source Sans Pro;
+    font-size: $text18;
+    font-style: normal;
+    font-weight: $regular;
+    line-height: 30px;
+    width: 352px;
+}
+
+// 
+.addchanges-writesomething {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 20px;
+    width: 350px;
+    // margin-right: 150px;
+}
+
+.addchanges-writesomething img {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+}
+
+
+// shiva file
+.search-icon-bar-container {
+    align-items: center;
+    background-color: #FFF;
+    width: 180px;
+    height: 36px;
+    display: flex;
+    margin: 10px;
+}
+
+.search-bar {
+    margin-top: 0px;
+    border: none;
+    width: 150px;
+    height: 34px;
+    outline: none;
+}
+
+.filter-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    float: right;
+    border-radius: 4px;
+    border: 1px solid #E0E0E0;
+    background: #FFF; 
+    width: 70px;
+    height: 40px;  
+}
+
+.filter-text{
+    color: var(--text-color-2, #444);
+    font-family: Source Sans Pro;
+    font-size: 18px;
+    font-style: normal;
+    text-align: center;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 auto;
+}
+
+.add-document-container{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    float: right;
+    border-radius: 4px;
+    border: 1px solid #E0E0E0;
+    background:blue; 
+    width: 130px;
+    height: 40px;   
+}
+
+.add-document-text{
+    color: var(--text-color-2, #444);
+    font-family: Source Sans Pro;
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    text-align: center;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 auto;
+}
+
+.changes-details-card{
+    width: 250px;
+}

@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6 col-md-12 box-shadow-right-side login-page-padding-container">
+            <!-- Pro Manage Logo -->
+            <img src="../../assets/Images/logos/logo.png" alt="Loginpage_xLogo">
+            <div class="container mt-3 pt-5">
+                <div class="row">
+                    <p class="stepper-tab1 me-2"></p>
+                    <p class="stepper-tab1 me-2"></p>
+                    <p class="stepper-tab2 me-2"></p>
+                    <p class="stepper-tab2"></p>
+                </div>
+            </div>
+            <div class="row my-2">
+                <p class="heading">How are you planning on using ProManage?</p>
+            </div>
+            <div class="row">
+                <mat-radio-group class="d-flex flex-column" [(ngModel)]="usingProManage" >
+                    <mat-radio-button *ngFor="let option of ProManageOptions" [value]="option" class="my-1">
+                        {{option}}
+                    </mat-radio-button>
+                </mat-radio-group>
+            </div>
+            <div class="mt-4">
+                <button class="stepper-back me-3" routerLink="/signUpAddDetailsPage"> <img
+                        src="../../../assets/Images/icons/leftArrow.png" alt="" class="me-1">Back</button>
+                <button class="stepper-next border-0" routerLink="/appPurposeType">Next &nbsp;&nbsp; <img
+                        src="../../../assets/Images/icons/rightarrow.png" alt="arrow"> </button>
+            </div>
+        </div>
+    </div>
+</div>

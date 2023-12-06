@@ -1,0 +1,122 @@
+<div class="container border">
+    <button mat-icon-button mat-dialog-close class="addrisk-dialog-button-close">
+         <mat-icon>close</mat-icon>
+    </button>
+    <mat-dialog-content>
+         <!-- risk heading -->
+         <h2 mat-dialog-title>Add Risk</h2>
+    </mat-dialog-content>
+
+         <!-- input field for risk title -->
+         <div class="riskTitle">
+              <input class="riskTitle-input-field" type="text" placeholder="Title" />
+              <mat-divider></mat-divider>
+              <!-- risk description -->
+              <input type="text" class="riskTitle-description-field" placeholder="Description" />
+         </div>
+
+    <div class="add-risk-input-form-field d-flex">
+         <div class="col-lg-6 col-md-12 col-sm-12">
+              <!-- inputfield-select-category -->
+              <mat-form-field appearance="outline" class="input-form-field">
+                   <mat-label>Select Category</mat-label>
+                   <mat-select>
+                        <mat-option value="Technical">Technical</mat-option>
+                        <mat-option value="Financial">Financial</mat-option>
+                        <mat-option value="Physical">Physical</mat-option>
+                        <mat-option value="Intangible">Intangible</mat-option>
+                        <mat-option value="Security">Security</mat-option>
+                   </mat-select>
+              </mat-form-field>
+         </div>
+         <!-- inputfield-select-risk area -->
+         <div class="col-lg-6 col-md-12 col-sm-12">
+              <mat-form-field appearance="outline" class="input-form-field">
+                   <mat-label>Risk Area</mat-label>
+                   <input matInput />
+              </mat-form-field>
+         </div>
+    </div>
+    <div class="add-risk-input-form-field d-flex">
+         <!-- inputfield-select-Impact Level -->
+
+         <div class="col-lg-6 col-md-12 col-sm-12">
+              <mat-form-field appearance="outline" class="input-form-field">
+                   <mat-label>Impact Level</mat-label>
+                   <mat-select>
+                        <mat-option value="primary">High</mat-option>
+                        <mat-option value="accent">Low</mat-option>
+                        <mat-option value="warn">Medium</mat-option>
+                   </mat-select>
+              </mat-form-field>
+         </div>
+         <div class="col-lg-6 col-md-12 col-sm-12">
+              <!-- inputfield-select-Probability -->
+              <mat-form-field appearance="outline" class="input-form-field">
+                   <mat-label>Probability</mat-label>
+                   <mat-select>
+                        <mat-option value="primary">High</mat-option>
+                        <mat-option value="accent">Low</mat-option>
+                        <mat-option value="warn">Medium</mat-option>
+                   </mat-select>
+              </mat-form-field>
+         </div>
+    </div>
+    <div class="add-risk-input-form-field d-flex">
+         <!-- inputfield-select-date-Identified -->
+         <div class="col-lg-6 col-md-12 col-sm-12">
+              <mat-form-field appearance="outline" class="input-form-field">
+                   <mat-label>Date Identified</mat-label>
+                   <input matInput [matDatepicker]="picker1" />
+                   <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+                   <mat-datepicker #picker1></mat-datepicker>
+              </mat-form-field>
+         </div>
+         <!-- inputfield-select-target-date -->
+         <div class="col-lg-6 col-md-12 col-sm-12">
+              <mat-form-field appearance="outline" class="input-form-field">
+                   <mat-label>Target Date</mat-label>
+                   <input matInput [matDatepicker]="picker2" />
+                   <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+                   <mat-datepicker #picker2></mat-datepicker>
+              </mat-form-field>
+         </div>
+    </div>
+    <div class="add-risk-input-form-field d-flex">
+         <!-- inputfield-owner -->
+         <div class="col-lg-6 col-md-12 col-sm-12">
+              <mat-form-field appearance="outline" class="input-form-field">
+                   <mat-label>Owner</mat-label>
+                   <mat-select>
+                        <mat-option value="primary">x</mat-option>
+                        <mat-option value="accent">y</mat-option>
+                        <mat-option value="warn">z</mat-option>
+                   </mat-select>
+              </mat-form-field>
+         </div>
+         <!-- inputfield-status -->
+         <div class="col-lg-6 col-md-12 col-sm-12">
+              <mat-form-field appearance="outline" class="input-form-field">
+                   <mat-label>Status</mat-label>
+                   <mat-select>
+                        <mat-option value="primary">Open</mat-option>
+                        <mat-option value="accent">Closed</mat-option>
+                        <mat-option value="warn">Onhold</mat-option>
+                   </mat-select>
+              </mat-form-field>
+         </div>
+    </div>
+
+         <div class="riskTitle">
+              <angular-editor [placeholder]="'Enter text here...'" formControlName="htmlContent">
+              </angular-editor>
+              <mat-divider></mat-divider>
+         </div>
+    
+</div>
+<div>
+<mat-dialog-actions class="button-cancel-risk fixed-bottom" align="end">
+         <button mat-stroked-button color="primary">Cancel</button>
+         <button mat-flat-button color="primary">Add Risk</button>
+    </mat-dialog-actions>
+</div>
